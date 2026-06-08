@@ -83,17 +83,17 @@
       background-image:url('assets/images/salle-banquettes.jpg');
       background-size:cover; background-position:center;
     }
-    .resy-info__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(4,3,2,.96) 0%, rgba(4,3,2,.7) 50%, rgba(4,3,2,.2) 100%); }
+    .resy-info__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(4,3,2,.97) 0%, rgba(4,3,2,.93) 55%, rgba(4,3,2,.82) 100%); }
     .resy-info__content { position:relative; z-index:2; height:100%; display:flex; flex-direction:column; justify-content:flex-end; padding:48px 44px; }
 
-    .resy-info__tag { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
-    .resy-info__title { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(28px,2.8vw,38px); color:var(--cream); line-height:1.15; margin-bottom:14px; }
-    .resy-info__desc { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:15px; color:rgba(240,235,224,.55); line-height:1.7; margin-bottom:36px; }
+    .resy-info__tag { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+    .resy-info__title { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(28px,2.8vw,38px); color:var(--cream); line-height:1.15; margin-bottom:14px; text-shadow:0 2px 14px rgba(0,0,0,.6); }
+    .resy-info__desc { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:15px; color:rgba(240,235,224,.82); line-height:1.7; margin-bottom:36px; text-shadow:0 1px 8px rgba(0,0,0,.5); }
 
     .info-contacts { display:flex; flex-direction:column; gap:16px; }
     .info-contact-item { display:flex; align-items:flex-start; gap:12px; }
     .info-contact-item svg { width:14px; height:14px; fill:var(--gold); flex-shrink:0; margin-top:2px; }
-    .info-contact-item__text { font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:var(--cream2); line-height:1.7; }
+    .info-contact-item__text { font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:var(--cream2); line-height:1.7; text-shadow:0 1px 4px rgba(0,0,0,.5); }
     .info-contact-item__text a { color:var(--cream2); text-decoration:none; }
     .info-contact-item__text a:hover { color:var(--cream); }
     .info-contact-item__label { font-size:9px; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:3px; }
@@ -223,6 +223,7 @@
       .resy-info { min-height:320px; }
       .resy-card { padding:44px 36px; }
     }
+    .resy-banner__cta { display:none; }
     @media (max-width:700px) {
       body { padding:8px; }
       .nav { padding:8px 10px 8px 12px; }
@@ -230,6 +231,7 @@
       .nav__links a { padding:6px 8px; font-size:9.5px; letter-spacing:.12em; }
       .resy-banner { height:160px; }
       .resy-banner__content { padding:24px 28px; }
+      .resy-banner__cta { display:inline-flex; align-items:center; gap:8px; margin-top:16px; padding:9px 20px; background:rgba(184,169,138,.18); border:1px solid rgba(184,169,138,.38); border-radius:999px; font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--cream); text-decoration:none; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
       .resy-info__content { padding:32px 28px; }
       .resy-card { padding:36px 28px; }
       .form-row { grid-template-columns:1fr; gap:10px; }
@@ -269,6 +271,8 @@
     .nav-overlay__links a::after { content:attr(data-label); position:absolute; left:0; top:100%; width:100%; text-align:center; font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(28px,8vw,50px); letter-spacing:.05em; text-transform:uppercase; color:var(--cream); transition:transform .52s cubic-bezier(.16,1,.3,1); }
     .nav-overlay__links a:hover span { transform:translateY(-100%); }
     .nav-overlay__links a:hover::after { transform:translateY(-100%); }
+    .nav-overlay__links a.is-leaving span { transform:translateY(-100%); }
+    .nav-overlay__links a.is-leaving::after { transform:translateY(-100%); }
     /* ── ACCESSIBILITÉ ──────────────────────────────────── */
     .skip-link { position:absolute; top:-100%; left:16px; z-index:99999; padding:10px 18px; background:var(--cream); color:var(--ink); font-family:'Jost',sans-serif; font-weight:600; font-size:13px; letter-spacing:.05em; border-radius:6px; text-decoration:none; transition:top .15s; }
     .skip-link:focus { top:8px; }
@@ -301,6 +305,7 @@
     <div class="resy-banner__content">
       <div class="resy-banner__eyebrow">Kabana House · Destreland, Baie-Mahault</div>
       <h1 class="resy-banner__title">Réservation</h1>
+      <a class="resy-banner__cta" href="#form-resy">Réserver une table →</a>
     </div>
   </div>
 
@@ -359,7 +364,7 @@
     </div>
 
     <!-- RIGHT : formulaire -->
-    <div class="resy-card">
+    <div class="resy-card" id="form-resy">
       <div class="resy-card__tag">◇ Demande de réservation</div>
       <h2 class="resy-card__title">Réserver une table</h2>
       <p class="resy-card__sub">Nous vous confirmons votre réservation par SMS sous 2h.</p>
@@ -561,6 +566,17 @@
   document.querySelector('.nav-overlay__close').addEventListener('click', closeMenu);
   overlay.addEventListener('click', function(e){ if(e.target===overlay) closeMenu(); });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+  var reduceMotionNav = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.nav-overlay__links a[href]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      if (!href || href.charAt(0) === '#') return;
+      e.preventDefault();
+      this.classList.add('is-leaving');
+      var dest = href;
+      setTimeout(function() { window.location.href = dest; }, reduceMotionNav ? 0 : 500);
+    });
+  });
 })();
 </script>
 </body>
