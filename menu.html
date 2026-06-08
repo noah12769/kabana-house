@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/jpeg" href="logo.jpg" />
+  <link rel="apple-touch-icon" href="logo.jpg" />
   <title>Menu — Kabana House | Restaurant Lounge Destreland, Guadeloupe</title>
   <meta name="description" content="Découvrez la carte de Kabana House : steaks premium, langouste, tartare d'espadon, colombo, burger signature, cocktails créoles. Restaurant lounge à Destreland, Baie-Mahault." />
   <meta property="og:title" content="Menu — Kabana House | Cuisine Créole & Lounge" />
@@ -124,7 +126,7 @@
     .item-top { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:6px; }
     .item-name { font-family:'Cormorant Garamond',serif; font-weight:500; font-size:17px; color:var(--cream); letter-spacing:.01em; flex:1; }
     .item-price { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:17px; color:var(--gold); white-space:nowrap; flex-shrink:0; }
-    .item-desc { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:13px; color:rgba(200,191,173,.5); line-height:1.5; }
+    .item-desc { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:15px; color:rgba(200,191,173,.55); line-height:1.55; }
     .item-badge { display:inline-block; margin-top:8px; padding:3px 10px; border-radius:999px; font-family:'Jost',sans-serif; font-size:8px; letter-spacing:.2em; text-transform:uppercase; background:rgba(184,169,138,.1); color:var(--gold); border:1px solid rgba(184,169,138,.2); }
 
     /* PHOTO BAND */
@@ -157,7 +159,7 @@
     .footer__links { list-style:none; display:flex; flex-direction:column; gap:8px; }
     .footer__links a { font-family:'Jost',sans-serif; font-weight:300; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--cream2); text-decoration:none; transition:color .2s; }
     .footer__links a:hover { color:var(--cream); }
-    .footer__info p { font-family:'Jost',sans-serif; font-weight:300; font-size:12px; color:var(--cream2); line-height:1.8; }
+    .footer__info p { font-family:'Jost',sans-serif; font-weight:300; font-size:13px; color:var(--cream2); line-height:1.8; }
     .footer__info a { color:var(--cream2); text-decoration:none; }
     .footer__info a:hover { color:var(--cream); }
     .footer__bottom { border-top:1px solid rgba(240,235,224,.06); padding-top:20px; display:flex; justify-content:space-between; align-items:center; }
@@ -222,18 +224,27 @@
     .nav-overlay__links a::after { content:attr(data-label); position:absolute; left:0; top:100%; width:100%; text-align:center; font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(28px,8vw,50px); letter-spacing:.05em; text-transform:uppercase; color:var(--cream); transition:transform .52s cubic-bezier(.16,1,.3,1); }
     .nav-overlay__links a:hover span { transform:translateY(-100%); }
     .nav-overlay__links a:hover::after { transform:translateY(-100%); }
+    /* ── ACCESSIBILITÉ ──────────────────────────────────── */
+    .skip-link { position:absolute; top:-100%; left:16px; z-index:99999; padding:10px 18px; background:var(--cream); color:var(--ink); font-family:'Jost',sans-serif; font-weight:600; font-size:13px; letter-spacing:.05em; border-radius:6px; text-decoration:none; transition:top .15s; }
+    .skip-link:focus { top:8px; }
+    :focus-visible { outline:2px solid var(--gold); outline-offset:3px; border-radius:4px; }
+    @media (prefers-reduced-motion: reduce) {
+      .nav-overlay { transition:none; }
+      .nav-overlay__links a span, .nav-overlay__links a::after { transition:none; }
+    }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Passer au contenu principal</a>
 
   <!-- NAV -->
   <div class="nav-wrap">
-    <nav class="nav">
+    <nav class="nav" aria-label="Navigation principale">
       <div class="nav__burger" role="button" tabindex="0" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></div>
       <a class="nav__logo" href="index.html">Kabana</a>
-      <div class="nav__sep"></div>
+      <div class="nav__sep" aria-hidden="true"></div>
       <ul class="nav__links">
-        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="menu.html" class="active" aria-current="page">Menu</a></li>
         <li><a href="about.html">À propos</a></li>
         <li><a href="reservation.html">Réserver</a></li>
       </ul>
@@ -264,7 +275,7 @@
   </div>
 
   <!-- MENU BODY -->
-  <div class="menu-body" role="main">
+  <div class="menu-body" role="main" id="main-content">
 
     <!-- ENTRÉES -->
     <section class="menu-section" id="entrees">
@@ -767,11 +778,11 @@
     </div>
   </footer>
 
-<div class="nav-overlay" id="navOverlay">
-  <button class="nav-overlay__close" aria-label="Fermer"><span></span><span></span></button>
-  <nav class="nav-overlay__links">
+<div class="nav-overlay" id="navOverlay" role="dialog" aria-modal="true" aria-label="Menu de navigation">
+  <button class="nav-overlay__close" aria-label="Fermer le menu"><span></span><span></span></button>
+  <nav class="nav-overlay__links" aria-label="Menu principal">
     <a href="index.html" data-label="Accueil"><span>Accueil</span></a>
-    <a href="menu.html" class="active" data-label="Menu"><span>Menu</span></a>
+    <a href="menu.html" class="active" aria-current="page" data-label="Menu"><span>Menu</span></a>
     <a href="reservation.html" data-label="Réservation"><span>Réservation</span></a>
     <a href="about.html" data-label="Notre Maison"><span>Notre Maison</span></a>
   </nav>

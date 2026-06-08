@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/jpeg" href="logo.jpg" />
+  <link rel="apple-touch-icon" href="logo.jpg" />
   <title>Notre Maison — Kabana House | Restaurant Lounge Guadeloupe</title>
   <meta name="description" content="L'histoire de Kabana House — né de la résilience de Clarence et Nicolas Sémar. Restaurant lounge créole au cœur de Destreland, Baie-Mahault, Guadeloupe." />
   <meta property="og:title" content="Notre Maison — Kabana House" />
@@ -94,12 +96,12 @@
     .stars__label { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--cream2); margin-left:8px; }
 
     .about__lead { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; color:var(--cream); line-height:1.55; margin-bottom:28px; }
-    .about__body { font-family:'Jost',sans-serif; font-weight:300; font-size:13px; color:var(--cream2); line-height:1.85; margin-bottom:24px; }
+    .about__body { font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:var(--cream2); line-height:1.85; margin-bottom:24px; }
 
     .timeline { margin:36px 0; border-left:1px solid rgba(240,235,224,.1); padding-left:24px; display:flex; flex-direction:column; gap:24px; }
     .timeline__item {}
     .timeline__year { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:22px; color:var(--gold); margin-bottom:4px; }
-    .timeline__text { font-family:'Jost',sans-serif; font-weight:300; font-size:12px; color:var(--cream2); line-height:1.7; }
+    .timeline__text { font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:var(--cream2); line-height:1.7; }
 
     .divider { width:48px; height:1px; background:var(--gold); opacity:.4; margin:32px 0; }
 
@@ -107,7 +109,7 @@
     .chef-card__avatar { width:56px; height:56px; border-radius:50%; background:rgba(184,169,138,.15); border:1px solid rgba(184,169,138,.2); flex-shrink:0; background-size:cover; background-position:center 10%; overflow:hidden; }
     .chef-card__name { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:20px; color:var(--cream); margin-bottom:4px; }
     .chef-card__role { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
-    .chef-card__bio { font-family:'Jost',sans-serif; font-weight:300; font-size:12px; color:var(--cream2); line-height:1.7; }
+    .chef-card__bio { font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:var(--cream2); line-height:1.7; }
 
     .awards { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:32px; }
     .award { padding:16px; background:rgba(255,255,255,.03); border-radius:10px; border:1px solid rgba(240,235,224,.06); }
@@ -145,7 +147,7 @@
     .footer__links { list-style:none; display:flex; flex-direction:column; gap:8px; }
     .footer__links a { font-family:'Jost',sans-serif; font-weight:300; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--cream2); text-decoration:none; transition:color .2s; }
     .footer__links a:hover { color:var(--cream); }
-    .footer__info p { font-family:'Jost',sans-serif; font-weight:300; font-size:12px; color:var(--cream2); line-height:1.8; }
+    .footer__info p { font-family:'Jost',sans-serif; font-weight:300; font-size:13px; color:var(--cream2); line-height:1.8; }
     .footer__info a { color:var(--cream2); text-decoration:none; }
     .footer__info a:hover { color:var(--cream); }
     .footer__bottom { border-top:1px solid rgba(240,235,224,.06); padding-top:20px; display:flex; justify-content:space-between; align-items:center; }
@@ -195,12 +197,33 @@
     .nav__burger:not(.open):hover span:nth-child(1) { transform: translateY(6px); }
     .nav__burger:not(.open):hover span:nth-child(3) { transform: translateY(-6px); }
 
-    /* ── PHOTO STRIP ──────────────────────────────────── */
-    .photo-strip-wrap { margin-bottom:10px; overflow:hidden; }
-    .photo-strip { overflow:hidden; width:100%; mask-image:linear-gradient(to right,transparent 0%,black 8%,black 92%,transparent 100%); -webkit-mask-image:linear-gradient(to right,transparent 0%,black 8%,black 92%,transparent 100%); }
+    /* ── PHOTO STRIP — desktop : 1 bande 400px ─────────── */
+    .photo-strip-wrap { margin-bottom:10px; overflow:hidden; display:flex; flex-direction:column; gap:10px; }
+    .photo-strip { overflow:hidden; width:100%; mask-image:linear-gradient(to right,transparent 0%,black 6%,black 94%,transparent 100%); -webkit-mask-image:linear-gradient(to right,transparent 0%,black 6%,black 94%,transparent 100%); }
     .photo-strip__track { display:flex; gap:10px; width:max-content; will-change:transform; }
     .photo-strip__slide { flex:none; width:300px; height:400px; border-radius:14px; background-size:cover; background-position:center; transition:transform .4s ease, filter .4s ease; filter:brightness(.85); }
     .photo-strip__slide:hover { transform:scale(1.025); filter:brightness(1); }
+    /* Bande 2 masquée sur desktop */
+    .photo-strip-wrap .photo-strip:nth-child(2) { display:none; }
+    /* ── PHOTO STRIP — mobile : 2 bandes 195px ─────────── */
+    @media (max-width:768px) {
+      .photo-strip__slide { height:195px; }
+      .photo-strip-wrap .photo-strip:nth-child(2) { display:block; }
+    }
+    /* ── ACCESSIBILITÉ ──────────────────────────────────── */
+    /* Skip link */
+    .skip-link { position:absolute; top:-100%; left:16px; z-index:99999; padding:10px 18px; background:var(--cream); color:var(--ink); font-family:'Jost',sans-serif; font-weight:600; font-size:13px; letter-spacing:.05em; border-radius:6px; text-decoration:none; transition:top .15s; }
+    .skip-link:focus { top:8px; }
+    /* Focus visible — outline doré pour tous les éléments interactifs */
+    :focus-visible { outline:2px solid var(--gold); outline-offset:3px; border-radius:4px; }
+    /* Annuler les transitions de l'overlay si reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+      .photo-strip__track { will-change:auto; }
+      .photo-strip__slide { transition:none; }
+      .nav-overlay { transition:none; }
+      .nav-overlay__links a span,
+      .nav-overlay__links a::after { transition:none; }
+    }
 
     /* ── OVERLAY NAVIGATION ──────────────────────────────── */
     .nav-overlay {
@@ -234,21 +257,22 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Passer au contenu principal</a>
 
   <div class="nav-wrap">
-    <nav class="nav">
+    <nav class="nav" aria-label="Navigation principale">
       <div class="nav__burger" role="button" tabindex="0" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></div>
       <a class="nav__logo" href="index.html">Kabana</a>
-      <div class="nav__sep"></div>
+      <div class="nav__sep" aria-hidden="true"></div>
       <ul class="nav__links">
         <li><a href="menu.html">Menu</a></li>
-        <li><a href="about.html" class="active">À propos</a></li>
+        <li><a href="about.html" class="active" aria-current="page">À propos</a></li>
         <li><a href="reservation.html">Réserver</a></li>
       </ul>
     </nav>
   </div>
 
-  <div class="split" role="main">
+  <div class="split" role="main" id="main-content">
 
     <!-- LEFT : TEXTE -->
     <div class="split__text">
@@ -321,35 +345,41 @@
 
   </div>
 
-  <!-- PHOTO STRIP -->
-  <section class="photo-strip-wrap">
+  <!-- PHOTO STRIP — deux bandes (décoratives, masquées aux lecteurs d'écran) -->
+  <section class="photo-strip-wrap" aria-hidden="true">
+    <!-- Bande 1 : défile vers la droite -->
     <div class="photo-strip">
-      <div class="photo-strip__track" id="carousel-track">
+      <div class="photo-strip__track" id="carousel-track-1">
         <div class="photo-strip__slide" style="background-image:url('assets/images/salade-poulet.jpg');background-position:center 40%"></div>
-        <div class="photo-strip__slide" style="background-image:url('assets/images/langouste-pasta.jpg');background-position:center 50%"></div>
         <div class="photo-strip__slide" style="background-image:url('assets/images/steak-frites.jpg');background-position:center 30%"></div>
-        <div class="photo-strip__slide" style="background-image:url('assets/images/entrees-plateau.jpg');background-position:center 40%"></div>
         <div class="photo-strip__slide" style="background-image:url('assets/images/pain-perdu.jpg');background-position:center 50%"></div>
-        <div class="photo-strip__slide" style="background-image:url('assets/images/langouste.jpg');background-position:center 40%"></div>
         <div class="photo-strip__slide" style="background-image:url('assets/images/steak-close.jpg');background-position:center 30%"></div>
-        <div class="photo-strip__slide" style="background-image:url('assets/images/salle-table.jpg');background-position:center 30%"></div>
         <div class="photo-strip__slide" style="background-image:url('assets/images/terrasse-soir.WEBP');background-position:center center"></div>
-        <div class="photo-strip__slide" style="background-image:url('assets/images/table-repas-festif.WEBP');background-position:center center"></div>
         <div class="photo-strip__slide" style="background-image:url('assets/images/cocktails-coupes-bar.WEBP');background-position:center 40%"></div>
-        <div class="photo-strip__slide" style="background-image:url('assets/images/burger-frites.WEBP');background-position:center 40%"></div>
         <div class="photo-strip__slide" style="background-image:url('assets/images/bar-salle-vue.WEBP');background-position:center center"></div>
-        <div class="photo-strip__slide" style="background-image:url('assets/images/cocktails-coupes-jaunes.WEBP');background-position:center 40%"></div>
         <div class="photo-strip__slide" style="background-image:url('assets/images/table-rose-bougie.WEBP');background-position:center center"></div>
-        <div class="photo-strip__slide" style="background-image:url('assets/images/pizzas-vin.WEBP');background-position:center center"></div>
         <div class="photo-strip__slide" style="background-image:url('assets/images/salade-bowl.WEBP');background-position:center 30%"></div>
-        <div class="photo-strip__slide" style="background-image:url('assets/images/salle-interieure-jour.WEBP');background-position:center center"></div>
         <div class="photo-strip__slide" style="background-image:url('assets/images/terrasse-jour.WEBP');background-position:center center"></div>
-        <div class="photo-strip__slide" style="background-image:url('assets/images/terrasse-rose-jour.WEBP');background-position:center center"></div>
         <div class="photo-strip__slide" style="background-image:url('assets/images/table-ronde-dressee.WEBP');background-position:center center"></div>
-        <div class="photo-strip__slide" style="background-image:url('assets/images/viande-grillee-assiette.WEBP');background-position:center center"></div>
         <div class="photo-strip__slide" style="background-image:url('assets/images/viande-grillee-salade.WEBP');background-position:center center"></div>
-        <div class="photo-strip__slide" style="background-image:url('assets/images/dessert-sorbet.WEBP');background-position:center center"></div>
         <div class="photo-strip__slide" style="background-image:url('assets/images/cocktails-varietes-bar.WEBP');background-position:center 30%"></div>
+      </div>
+    </div>
+    <!-- Bande 2 : défile vers la gauche -->
+    <div class="photo-strip">
+      <div class="photo-strip__track" id="carousel-track-2">
+        <div class="photo-strip__slide" style="background-image:url('assets/images/langouste-pasta.jpg');background-position:center 50%"></div>
+        <div class="photo-strip__slide" style="background-image:url('assets/images/entrees-plateau.jpg');background-position:center 40%"></div>
+        <div class="photo-strip__slide" style="background-image:url('assets/images/langouste.jpg');background-position:center 40%"></div>
+        <div class="photo-strip__slide" style="background-image:url('assets/images/salle-table.jpg');background-position:center 30%"></div>
+        <div class="photo-strip__slide" style="background-image:url('assets/images/table-repas-festif.WEBP');background-position:center center"></div>
+        <div class="photo-strip__slide" style="background-image:url('assets/images/burger-frites.WEBP');background-position:center 40%"></div>
+        <div class="photo-strip__slide" style="background-image:url('assets/images/cocktails-coupes-jaunes.WEBP');background-position:center 40%"></div>
+        <div class="photo-strip__slide" style="background-image:url('assets/images/pizzas-vin.WEBP');background-position:center center"></div>
+        <div class="photo-strip__slide" style="background-image:url('assets/images/salle-interieure-jour.WEBP');background-position:center center"></div>
+        <div class="photo-strip__slide" style="background-image:url('assets/images/terrasse-rose-jour.WEBP');background-position:center center"></div>
+        <div class="photo-strip__slide" style="background-image:url('assets/images/viande-grillee-assiette.WEBP');background-position:center center"></div>
+        <div class="photo-strip__slide" style="background-image:url('assets/images/dessert-sorbet.WEBP');background-position:center center"></div>
       </div>
     </div>
   </section>
@@ -391,9 +421,9 @@
   </footer>
 
 
-<div class="nav-overlay" id="navOverlay">
-  <button class="nav-overlay__close" aria-label="Fermer"><span></span><span></span></button>
-  <nav class="nav-overlay__links">
+<div class="nav-overlay" id="navOverlay" role="dialog" aria-modal="true" aria-label="Menu de navigation">
+  <button class="nav-overlay__close" aria-label="Fermer le menu"><span></span><span></span></button>
+  <nav class="nav-overlay__links" aria-label="Menu principal">
     <a href="index.html" data-label="Accueil"><span>Accueil</span></a>
     <a href="menu.html" data-label="Menu"><span>Menu</span></a>
     <a href="reservation.html" data-label="Réservation"><span>Réservation</span></a>
@@ -404,37 +434,43 @@
 
 <script src="assets/js/cookie-banner.js" defer></script>
 <script>
-/* Carousel JS — boucle infinie fluide */
-(function(){
-  var track = document.getElementById('carousel-track');
-  if (!track) return;
+/* Carousels JS — deux bandes : droite (+1) et gauche (-1) */
+var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var isMobile    = window.matchMedia('(max-width:768px)');
 
-  /* Cloner les slides pour la boucle */
+function initStrip(trackId, dir) {
+  var track = document.getElementById(trackId);
+  if (!track) return;
+  /* Bande 2 uniquement sur mobile */
+  if (dir < 0 && !isMobile.matches) return;
+  /* Respecter prefers-reduced-motion */
+  if (reduceMotion) return;
+
   var originals = Array.from(track.children);
   originals.forEach(function(s){ track.appendChild(s.cloneNode(true)); });
-
-  var pos = 0;
-  var speed = 0.45;
   var paused = false;
-  var setWidth = 0;
+  var pos = 0;
+  var sw = 0;
+  var spd = 0.55;
 
   track.parentElement.addEventListener('mouseenter', function(){ paused = true; });
   track.parentElement.addEventListener('mouseleave', function(){ paused = false; });
 
-  function getSetWidth(){
-    var slides = track.querySelectorAll('.photo-strip__slide');
+  function calcSW(){
     var n = originals.length;
-    var slideW = slides[0].offsetWidth;
+    var slideW = track.children[0].offsetWidth;
     var gap = parseInt(getComputedStyle(track).gap) || 10;
     return n * (slideW + gap);
   }
 
   function tick(){
     if (!paused){
-      pos += speed;
-      if (!setWidth || pos >= setWidth) {
-        if (!setWidth) setWidth = getSetWidth();
-        if (pos >= setWidth) pos -= setWidth;
+      if (dir > 0){
+        pos += spd;
+        if (sw && pos >= sw) pos -= sw;
+      } else {
+        pos -= spd;
+        if (sw && pos < 0) pos += sw;
       }
       track.style.transform = 'translateX(-' + pos + 'px)';
     }
@@ -442,10 +478,14 @@
   }
 
   window.addEventListener('load', function(){
-    setWidth = getSetWidth();
+    sw = calcSW();
+    if (dir < 0) pos = sw * 0.5;
     requestAnimationFrame(tick);
   });
-})();
+}
+
+initStrip('carousel-track-1',  1);
+initStrip('carousel-track-2', -1);
 </script>
 <script>
 (function(){
