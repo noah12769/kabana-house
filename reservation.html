@@ -3,17 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow" />
-  <title>Réservation — ARDOISE</title>
+  <title>Réservation — Kabana House | Restaurant Lounge Destreland, Guadeloupe</title>
+  <meta name="description" content="Réservez votre table au Kabana House, restaurant lounge à Destreland, Baie-Mahault. Cuisine créole, steaks, langouste. Ouvert lun–mer 9h–23h30, jeu–sam 9h–minuit." />
+  <meta property="og:title" content="Réserver une table — Kabana House" />
+  <meta property="og:description" content="Réservez au Kabana House, restaurant lounge créole à Destreland, Baie-Mahault, Guadeloupe." />
+  <meta property="og:type" content="restaurant" />
+  <meta name="geo.region" content="GP" />
+  <meta name="geo.placename" content="Baie-Mahault, Guadeloupe" />
+  <meta property="og:image" content="https://www.kabanahouse.fr/assets/images/terrasse-soir.WEBP" />
+  <meta property="og:image:alt" content="Terrasse du Kabana House le soir — Destreland, Guadeloupe" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Réserver une table — Kabana House" />
+  <meta name="twitter:description" content="Réservez au Kabana House, restaurant lounge créole à Destreland, Baie-Mahault, Guadeloupe." />
+  <meta name="twitter:image" content="https://www.kabanahouse.fr/assets/images/terrasse-soir.WEBP" />
+  <meta name="theme-color" content="#0a0b0c" />
+  <link rel="canonical" href="https://www.kabanahouse.fr/reservation.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Kabana House",
+    "url": "https://www.kabanahouse.fr",
+    "telephone": "+590690445050",
+    "email": "contact@kabanahouse.fr",
+    "address": { "@type": "PostalAddress", "streetAddress": "Centre Commercial Destreland", "addressLocality": "Baie-Mahault", "postalCode": "97122", "addressCountry": "GP" },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"], "opens": "09:00", "closes": "23:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday","Friday","Saturday"], "opens": "09:00", "closes": "00:00" }
+    ],
+    "servesCuisine": ["Créole","Steakhouse","Fruits de mer"],
+    "priceRange": "€€-€€€",
+    "acceptsReservations": "True"
+  }
+  </script>
   <style>
     *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
     :root { --ink:#0a0b0c; --cream:#f0ebe0; --cream2:#c8bfad; --gold:#b8a98a; --r:18px; }
-
     html { background:var(--ink); }
-    body { background:var(--ink); padding:10px; min-height:100vh; font-family:'Jost',sans-serif; }
+    body { background:var(--ink); padding:10px; min-height:100dvh; font-family:'Jost',sans-serif; }
 
     /* NAV */
     .nav-wrap { position:sticky; top:0; z-index:100; padding:0 0 10px 0; pointer-events:none; }
@@ -28,97 +59,144 @@
     .nav__links a:hover { color:var(--cream); background:rgba(240,235,224,.1); }
     .nav__links a.active { color:var(--cream); background:rgba(240,235,224,.14); }
 
-    /* HERO */
-    .page-hero { position:relative; border-radius:var(--r); overflow:hidden; height:220px; margin-bottom:10px; background-image:url('https://images.pexels.com/photos/6839656/pexels-photo-6839656.jpeg?auto=compress&cs=tinysrgb&w=1920'); background-size:cover; background-position:center 60%; }
-    .page-hero__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.88) 0%, rgba(0,0,0,.4) 60%, rgba(0,0,0,.2) 100%); }
-    .page-hero__content { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; padding:32px 44px; }
-    .page-hero__eyebrow { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
-    .page-hero__title { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(44px,5vw,70px); letter-spacing:-.01em; text-transform:uppercase; color:var(--cream); line-height:.9; }
+    /* BANNER */
+    .resy-banner {
+      position:relative; border-radius:var(--r); overflow:hidden;
+      height:220px; margin-bottom:10px;
+      background-image:url('assets/images/terrasse-soir.WEBP');
+      background-size:cover; background-position:center center;
+    }
+    .resy-banner__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(6,4,3,.88) 0%, rgba(6,4,3,.45) 60%, rgba(6,4,3,.2) 100%); }
+    .resy-banner__content { position:relative; z-index:2; height:100%; display:flex; flex-direction:column; justify-content:flex-end; padding:36px 48px; }
+    .resy-banner__eyebrow { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
+    .resy-banner__title { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(44px,5.5vw,68px); letter-spacing:.04em; text-transform:uppercase; color:var(--cream); line-height:.92; }
 
-    /* GRID */
-    .resy-grid { display:grid; grid-template-columns:340px 1fr; gap:10px; margin-bottom:10px; }
+    /* MAIN 2-COL */
+    .resy-main { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px; align-items:stretch; min-height:calc(100dvh - 370px); }
 
-    /* INFO PANEL */
-    .info-panel { border-radius:var(--r); background:rgba(255,255,255,.025); border:1px solid rgba(240,235,224,.07); padding:40px 36px; display:flex; flex-direction:column; gap:32px; }
-    .info-block__title { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.32em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
-    .info-block__main { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:22px; color:var(--cream); line-height:1.4; }
-    .info-block__main a { color:var(--cream); text-decoration:none; border-bottom:1px solid rgba(240,235,224,.2); padding-bottom:1px; transition:border-color .2s; }
-    .info-block__main a:hover { border-color:var(--gold); color:var(--gold); }
-    .info-block__sub { font-family:'Jost',sans-serif; font-weight:300; font-size:11px; color:var(--cream2); line-height:1.8; margin-top:6px; }
-    .hours-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:4px; }
-    .hours-pill { background:rgba(255,255,255,.04); border:1px solid rgba(240,235,224,.06); border-radius:8px; padding:10px 12px; }
-    .hours-pill__service { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:4px; }
-    .hours-pill__time { font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--cream); }
+    /* LEFT — photo + infos */
+    .resy-info {
+      position:relative; border-radius:var(--r); overflow:hidden; min-height:560px;
+      background-image:url('assets/images/salle-banquettes.jpg');
+      background-size:cover; background-position:center;
+    }
+    .resy-info__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(4,3,2,.96) 0%, rgba(4,3,2,.7) 50%, rgba(4,3,2,.2) 100%); }
+    .resy-info__content { position:relative; z-index:2; height:100%; display:flex; flex-direction:column; justify-content:flex-end; padding:48px 44px; }
 
-    .map-placeholder { border-radius:12px; overflow:hidden; height:140px; background:rgba(255,255,255,.03); border:1px solid rgba(240,235,224,.06); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; cursor:pointer; transition:background .2s; }
-    .map-placeholder:hover { background:rgba(255,255,255,.05); }
-    .map-placeholder__icon { font-size:20px; color:var(--gold); opacity:.6; }
-    .map-placeholder__text { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--cream2); }
+    .resy-info__tag { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+    .resy-info__title { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(28px,2.8vw,38px); color:var(--cream); line-height:1.15; margin-bottom:14px; }
+    .resy-info__desc { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:15px; color:rgba(240,235,224,.55); line-height:1.7; margin-bottom:36px; }
 
-    /* FORM PANEL */
-    .form-panel { border-radius:var(--r); background:rgba(255,255,255,.025); border:1px solid rgba(240,235,224,.07); padding:40px 44px; }
-    .form-title { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:32px; color:var(--cream); margin-bottom:6px; }
-    .form-subtitle { font-family:'Jost',sans-serif; font-weight:300; font-size:11px; color:var(--cream2); margin-bottom:32px; letter-spacing:.05em; }
+    .info-contacts { display:flex; flex-direction:column; gap:16px; }
+    .info-contact-item { display:flex; align-items:flex-start; gap:12px; }
+    .info-contact-item svg { width:14px; height:14px; fill:var(--gold); flex-shrink:0; margin-top:2px; }
+    .info-contact-item__text { font-family:'Jost',sans-serif; font-weight:300; font-size:12px; color:var(--cream2); line-height:1.7; }
+    .info-contact-item__text a { color:var(--cream2); text-decoration:none; }
+    .info-contact-item__text a:hover { color:var(--cream); }
+    .info-contact-item__label { font-size:9px; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:3px; }
+
+    /* MINI MAP */
+    .info-map { margin-top:22px; border-radius:10px; overflow:hidden; height:150px; width:280px; max-width:100%; flex-shrink:0; border:1px solid rgba(240,235,224,.12); }
+    .info-map iframe { width:100%; height:100%; border:0; display:block; }
+
+    /* RIGHT — form card */
+    .resy-card {
+      border-radius:var(--r);
+      background:rgba(255,255,255,.025);
+      border:1px solid rgba(240,235,224,.07);
+      padding:52px 48px;
+      display:flex; flex-direction:column; justify-content:center;
+    }
+
+    .resy-card__tag { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+    .resy-card__title { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(28px,2.5vw,36px); color:var(--cream); margin-bottom:6px; }
+    .resy-card__sub { font-family:'Jost',sans-serif; font-weight:300; font-size:11.5px; color:rgba(200,191,173,.45); line-height:1.7; margin-bottom:36px; }
 
     .form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px; }
-    .form-row.single { grid-template-columns:1fr; }
-    .form-row.three { grid-template-columns:1fr 1fr 1fr; }
-
-    .field { display:flex; flex-direction:column; gap:6px; }
-    .field label { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); }
-    .field input, .field select, .field textarea {
-      background:rgba(255,255,255,.04); border:1px solid rgba(240,235,224,.1); border-radius:10px;
-      padding:13px 16px; color:var(--cream); font-family:'Jost',sans-serif; font-weight:300; font-size:13px;
+    .field { display:flex; flex-direction:column; gap:7px; }
+    .field label { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); }
+    .field input {
+      background:rgba(255,255,255,.05); border:1px solid rgba(240,235,224,.1);
+      border-radius:10px; padding:14px 16px;
+      color:var(--cream); font-family:'Jost',sans-serif; font-weight:300; font-size:13px;
       outline:none; transition:border-color .2s, background .2s; width:100%;
-      -webkit-appearance:none; appearance:none;
+      -webkit-appearance:none; appearance:none; color-scheme:dark;
     }
-    .field select { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c8bfad' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 14px center; padding-right:36px; }
-    .field select option { background:#1a1814; color:var(--cream); }
-    .field input:focus, .field select:focus, .field textarea:focus { border-color:rgba(184,169,138,.4); background:rgba(255,255,255,.06); }
-    .field input::placeholder, .field textarea::placeholder { color:rgba(200,191,173,.3); }
-    .field textarea { resize:none; height:80px; }
+    .field input:focus { border-color:rgba(184,169,138,.45); background:rgba(255,255,255,.08); }
+    .field input::placeholder { color:rgba(200,191,173,.28); }
+    .field input[type="date"]::-webkit-calendar-picker-indicator,
+    .field input[type="time"]::-webkit-calendar-picker-indicator { filter:invert(.5) sepia(.2); cursor:pointer; }
 
-    /* AVAILABILITY CHECK */
-    .avail-section { margin-top:20px; padding-top:20px; border-top:1px solid rgba(240,235,224,.07); }
-    .avail-btn {
-      width:100%; padding:16px; border-radius:10px;
-      background:rgba(184,169,138,.12); border:1px solid rgba(184,169,138,.2);
-      color:var(--gold); font-family:'Jost',sans-serif; font-weight:300; font-size:11px; letter-spacing:.22em; text-transform:uppercase;
-      cursor:pointer; transition:background .2s, border-color .2s, color .2s; margin-bottom:12px;
+    /* CHECK BTN */
+    .check-btn {
+      width:100%; padding:14px; border-radius:10px; margin-bottom:10px;
+      background:transparent; border:1px solid rgba(240,235,224,.18);
+      color:var(--cream2); font-family:'Jost',sans-serif; font-weight:300;
+      font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+      cursor:pointer; transition:background .2s, border-color .2s, color .2s;
     }
-    .avail-btn:hover { background:rgba(184,169,138,.2); border-color:rgba(184,169,138,.35); color:var(--cream); }
+    .check-btn:hover { background:rgba(255,255,255,.05); border-color:rgba(240,235,224,.35); color:var(--cream); }
 
-    .avail-result { display:none; }
-    .avail-result.visible { display:block; }
-    .avail-result__title { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
-    .avail-slots { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:16px; }
-    .avail-slot { border-radius:10px; padding:14px 10px; text-align:center; border:1px solid rgba(240,235,224,.08); background:rgba(255,255,255,.03); }
-    .avail-slot.open { border-color:rgba(100,180,100,.25); background:rgba(100,180,100,.06); }
-    .avail-slot.full { border-color:rgba(180,80,80,.25); background:rgba(180,80,80,.06); opacity:.6; }
-    .avail-slot__time { font-family:'Cormorant Garamond',serif; font-size:18px; color:var(--cream); margin-bottom:4px; }
-    .avail-slot__count { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.15em; text-transform:uppercase; color:var(--cream2); }
-    .avail-slot.open .avail-slot__count { color:#7aba7a; }
-    .avail-slot.full .avail-slot__count { color:#c07070; }
-    .avail-slot__btn { margin-top:8px; font-family:'Jost',sans-serif; font-weight:300; font-size:8px; letter-spacing:.15em; text-transform:uppercase; color:var(--gold); cursor:pointer; background:none; border:none; text-decoration:underline; text-underline-offset:3px; }
+    /* AVAILABILITY CHIP */
+    @keyframes chipIn { from{opacity:0;transform:translateY(-5px)} to{opacity:1;transform:translateY(0)} }
+    .avail-chip {
+      display:none; align-items:center; gap:10px;
+      padding:11px 16px; border-radius:10px; margin-bottom:10px;
+      font-family:'Jost',sans-serif; font-weight:300; font-size:11px; letter-spacing:.03em;
+      animation:chipIn .3s cubic-bezier(.16,1,.3,1);
+    }
+    .avail-chip.visible { display:flex; }
+    .avail-chip.ok  { background:rgba(100,185,100,.1);  border:1px solid rgba(100,185,100,.22); color:rgba(165,230,165,.9); }
+    .avail-chip.few { background:rgba(215,160,50,.1);   border:1px solid rgba(215,160,50,.22);  color:rgba(235,195,115,.9); }
+    .avail-chip.none{ background:rgba(200,80,80,.08);   border:1px solid rgba(200,80,80,.2);    color:rgba(230,150,150,.85); }
+    .avail-chip__dot { width:7px; height:7px; border-radius:50%; flex-shrink:0; }
+    .avail-chip.ok  .avail-chip__dot { background:rgba(120,205,120,.9); box-shadow:0 0 6px rgba(120,205,120,.4); }
+    .avail-chip.few .avail-chip__dot { background:rgba(225,180,70,.9);  box-shadow:0 0 6px rgba(225,180,70,.4); }
+    .avail-chip.none .avail-chip__dot{ background:rgba(210,100,100,.9); }
 
-    .submit-btn {
-      width:100%; padding:18px; border-radius:10px;
+    /* SUBMIT BTN */
+    .resy-btn {
+      width:100%; padding:18px; border-radius:10px; margin-top:4px;
       background:var(--cream); border:none;
-      color:var(--ink); font-family:'Jost',sans-serif; font-weight:400; font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+      color:var(--ink); font-family:'Jost',sans-serif; font-weight:400;
+      font-size:11px; letter-spacing:.22em; text-transform:uppercase;
       cursor:pointer; transition:opacity .2s, transform .15s;
-      margin-top:12px;
     }
-    .submit-btn:hover { opacity:.92; transform:translateY(-1px); }
-    .submit-btn:active { transform:translateY(0); }
+    .resy-btn:hover { opacity:.9; transform:translateY(-1px); }
+    .resy-btn:active { transform:translateY(0); }
 
-    .success-msg { display:none; border-radius:12px; background:rgba(100,180,100,.08); border:1px solid rgba(100,180,100,.2); padding:24px; text-align:center; margin-top:12px; }
+    /* SUCCESS */
+    @keyframes successIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+    .success-msg { display:none; animation:successIn .5s cubic-bezier(.16,1,.3,1); }
     .success-msg.visible { display:block; }
-    .success-msg__icon { font-size:28px; color:#7aba7a; margin-bottom:8px; }
-    .success-msg__title { font-family:'Cormorant Garamond',serif; font-size:22px; color:var(--cream); margin-bottom:6px; }
-    .success-msg__text { font-family:'Jost',sans-serif; font-weight:300; font-size:12px; color:var(--cream2); line-height:1.7; }
+    .success-icon { font-size:36px; color:#7aba7a; text-align:center; margin-bottom:10px; }
+    .success-title { font-family:'Cormorant Garamond',serif; font-size:28px; color:var(--cream); text-align:center; margin-bottom:10px; }
+    .success-ref {
+      font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.32em; text-transform:uppercase;
+      color:var(--gold); text-align:center; margin-bottom:22px;
+      display:flex; justify-content:center;
+    }
+    .success-ref span {
+      padding:6px 18px; border-radius:999px;
+      background:rgba(184,169,138,.1); border:1px solid rgba(184,169,138,.2);
+    }
+    .success-recap {
+      background:rgba(255,255,255,.03); border:1px solid rgba(240,235,224,.07); border-radius:12px;
+      padding:6px 20px; margin-bottom:18px;
+    }
+    .success-recap-row {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:10px 0; border-bottom:1px solid rgba(240,235,224,.05);
+    }
+    .success-recap-row:last-child { border-bottom:none; }
+    .success-recap-label { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:rgba(200,191,173,.45); }
+    .success-recap-value { font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--cream2); }
+    .success-note { font-family:'Jost',sans-serif; font-weight:300; font-size:10.5px; color:rgba(200,191,173,.38); line-height:1.7; text-align:center; }
+
+    .resy-divider { width:40px; height:1px; background:rgba(184,169,138,.22); margin:28px 0; }
 
     /* FOOTER */
-    .footer { margin-top:10px; border-radius:var(--r); background:rgba(15,12,10,.7); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(240,235,224,.07); padding:36px 44px 28px; }
+    .footer { border-radius:var(--r); background:rgba(15,12,10,.7); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(240,235,224,.07); padding:36px 44px 28px; }
     .footer__top { display:grid; grid-template-columns:1fr 1fr 1fr; gap:40px; margin-bottom:28px; }
     .footer__logo { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:28px; letter-spacing:.18em; text-transform:uppercase; color:var(--cream); margin-bottom:8px; }
     .footer__tagline { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:13px; color:var(--gold); }
@@ -136,86 +214,66 @@
     .footer__social a:hover { color:var(--cream); }
     .footer__social svg { width:14px; height:14px; fill:currentColor; }
 
-    /* ── RESPONSIVE ───────────────────────────────────────────── */
-    @media (max-width: 900px) {
-      .resy-grid { grid-template-columns: 280px 1fr; }
-      .form-panel { padding: 32px 32px; }
+    /* RESPONSIVE */
+    @media (max-width:900px) {
+      .resy-main { grid-template-columns:1fr; }
+      .resy-info { min-height:320px; }
+      .resy-card { padding:44px 36px; }
+    }
+    @media (max-width:700px) {
+      body { padding:8px; }
+      .nav { padding:8px 10px 8px 12px; }
+      .nav__logo { font-size:16px; letter-spacing:.2em; }
+      .nav__links a { padding:6px 8px; font-size:9.5px; letter-spacing:.12em; }
+      .resy-banner { height:160px; }
+      .resy-banner__content { padding:24px 28px; }
+      .resy-info__content { padding:32px 28px; }
+      .resy-card { padding:36px 28px; }
+      .form-row { grid-template-columns:1fr; gap:10px; }
+      .footer__top { grid-template-columns:1fr; gap:24px; }
+      .footer { padding:28px 24px 20px; }
+      .info-map { height:130px; }
+    }
+    @media (max-width:480px) {
+      .nav { padding:7px 9px 7px 12px; gap:2px; }
+      .nav__logo { font-size:13px; letter-spacing:.15em; }
+      .nav__sep { margin:0 3px; }
+      .nav__links a { font-size:8px; letter-spacing:.09em; padding:5px 6px; }
+      .resy-card { padding:28px 20px; }
+      .resy-card__sub { margin-bottom:24px; }
     }
 
-    @media (max-width: 700px) {
-      body { padding: 8px; }
-      .nav { padding: 8px 10px 8px 12px; }
-      .nav__logo { font-size: 16px; letter-spacing: .2em; }
-      .nav__links a { padding: 6px 8px; font-size: 9.5px; letter-spacing: .12em; }
-      .page-hero { height: 160px; }
-      .page-hero__content { padding: 20px 24px; }
-      .page-hero__title { font-size: clamp(32px, 10vw, 52px); }
-      .resy-grid { grid-template-columns: 1fr; gap: 8px; }
-      .info-panel { padding: 28px 24px; gap: 24px; }
-      .hours-grid { grid-template-columns: 1fr 1fr; }
-      .form-panel { padding: 28px 24px; }
-      .form-row, .form-row.three { grid-template-columns: 1fr; gap: 8px; }
-      .avail-slots { grid-template-columns: 1fr 1fr; gap: 8px; }
-      .footer__top { grid-template-columns: 1fr; gap: 24px; }
-      .footer { padding: 28px 24px 20px; }
-    }
+    /* BURGER */
+    .nav__burger span { transition:transform .35s cubic-bezier(.16,1,.3,1), opacity .25s; }
+    .nav__burger.open span:nth-child(1) { transform:rotate(45deg) translate(4px,4.5px); }
+    .nav__burger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .nav__burger.open span:nth-child(3) { transform:rotate(-45deg) translate(4px,-4.5px); }
+    .nav__burger:not(.open):hover span:nth-child(1) { transform:translateY(6px); }
+    .nav__burger:not(.open):hover span:nth-child(3) { transform:translateY(-6px); }
 
-    @media (max-width: 480px) {
-      .nav { padding: 7px 9px 7px 12px; gap: 2px; }
-      .nav__logo { font-size: 13px; letter-spacing: .15em; }
-      .nav__sep { margin: 0 3px; }
-      .nav__links a { font-size: 8px; letter-spacing: .09em; padding: 5px 6px; }
-      .avail-slots { grid-template-columns: 1fr; }
-      .info-panel { padding: 20px 18px; }
-      .form-panel { padding: 20px 18px; }
-    }
-
-    /* ── BURGER → CROIX ──────────────────────────────────── */
-    .nav__burger span { transition: transform .35s cubic-bezier(.16,1,.3,1), opacity .25s; }
-    .nav__burger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4.5px); }
-    .nav__burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    .nav__burger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4.5px); }
-
-    /* ── OVERLAY NAVIGATION ──────────────────────────────── */
-    .nav-overlay {
-      position: fixed; inset: 0; z-index: 9999;
-      background: rgba(10,11,12,.96);
-      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      opacity: 0; pointer-events: none;
-      transition: opacity .4s cubic-bezier(.16,1,.3,1);
-    }
-    .nav-overlay.open { opacity: 1; pointer-events: all; }
-    .nav-overlay__close {
-      position: absolute; top: 20px; left: 20px;
-      width: 44px; height: 40px;
-      background: rgba(8,7,6,.58); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
-      border: 1px solid rgba(240,235,224,.1); border-radius: 999px;
-      box-shadow: 0 4px 24px rgba(0,0,0,.5);
-      cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0;
-    }
-    .nav-overlay__close span { position: absolute; display: block; width: 18px; height: 1.5px; background: var(--cream); }
-    .nav-overlay__close span:nth-child(1) { transform: rotate(45deg); }
-    .nav-overlay__close span:nth-child(2) { transform: rotate(-45deg); }
-    .nav-overlay__links { display: flex; flex-direction: column; align-items: center; gap: 28px; width: 100%; padding: 0 20px; }
-    .nav-overlay__links a {
-      font-family: 'Cormorant Garamond', serif; font-weight: 300;
-      font-size: clamp(28px, 8vw, 50px);
-      letter-spacing: .05em; text-transform: uppercase;
-      color: var(--cream); text-decoration: none;
-      opacity: .45; transition: opacity .25s, letter-spacing .35s;
-      display: block; text-align: center; width: 100%;
-    }
-    .nav-overlay__links a.active { opacity: .9; }
-    .nav-overlay__links a:hover { opacity: 1; letter-spacing: .08em; }
+    /* OVERLAY */
+    .nav-overlay { position:fixed; inset:0; z-index:9999; background:rgba(10,11,12,.96); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); display:flex; flex-direction:column; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .4s cubic-bezier(.16,1,.3,1); }
+    .nav-overlay.open { opacity:1; pointer-events:all; }
+    .nav-overlay__close { position:absolute; top:20px; left:20px; width:44px; height:40px; background:rgba(8,7,6,.58); backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px); border:1px solid rgba(240,235,224,.1); border-radius:999px; box-shadow:0 4px 24px rgba(0,0,0,.5); cursor:pointer; display:flex; align-items:center; justify-content:center; padding:0; }
+    .nav-overlay__close span { position:absolute; display:block; width:18px; height:1.5px; background:var(--cream); }
+    .nav-overlay__close span:nth-child(1) { transform:rotate(45deg); }
+    .nav-overlay__close span:nth-child(2) { transform:rotate(-45deg); }
+    .nav-overlay__links { display:flex; flex-direction:column; align-items:center; gap:28px; width:100%; padding:0 20px; }
+    .nav-overlay__links a { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(28px,8vw,50px); letter-spacing:.05em; text-transform:uppercase; color:var(--cream); text-decoration:none; opacity:.45; display:block; text-align:center; width:100%; position:relative; overflow:hidden; line-height:1.12; transition:opacity .4s cubic-bezier(.16,1,.3,1); }
+    .nav-overlay__links a.active { opacity:.9; }
+    .nav-overlay__links a:hover { opacity:1; }
+    .nav-overlay__links a span { display:block; transition:transform .52s cubic-bezier(.16,1,.3,1); }
+    .nav-overlay__links a::after { content:attr(data-label); position:absolute; left:0; top:100%; width:100%; text-align:center; font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(28px,8vw,50px); letter-spacing:.05em; text-transform:uppercase; color:var(--cream); transition:transform .52s cubic-bezier(.16,1,.3,1); }
+    .nav-overlay__links a:hover span { transform:translateY(-100%); }
+    .nav-overlay__links a:hover::after { transform:translateY(-100%); }
   </style>
 </head>
 <body>
 
   <div class="nav-wrap">
     <nav class="nav">
-      <div class="nav__burger"><span></span><span></span><span></span></div>
-      <a class="nav__logo" href="index.html">Ardoise</a>
+      <div class="nav__burger" role="button" tabindex="0" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></div>
+      <a class="nav__logo" href="index.html">Kabana</a>
       <div class="nav__sep"></div>
       <ul class="nav__links">
         <li><a href="menu.html">Menu</a></li>
@@ -225,298 +283,267 @@
     </nav>
   </div>
 
-  <div class="page-hero">
-    <div class="page-hero__overlay"></div>
-    <div class="page-hero__content">
-      <div class="page-hero__eyebrow">Ardoise · Paris VI</div>
-      <div class="page-hero__title">Réservation</div>
+  <!-- BANNER -->
+  <div class="resy-banner">
+    <div class="resy-banner__overlay"></div>
+    <div class="resy-banner__content">
+      <div class="resy-banner__eyebrow">Kabana House · Destreland, Baie-Mahault</div>
+      <h1 class="resy-banner__title">Réservation</h1>
     </div>
   </div>
 
-  <div class="resy-grid">
+  <!-- MAIN 2-COL -->
+  <div class="resy-main" role="main">
 
-    <!-- INFOS -->
-    <div class="info-panel">
-      <div class="info-block">
-        <div class="info-block__title">Téléphone</div>
-        <div class="info-block__main"><a href="tel:+33142687420">+33 1 42 68 74 20</a></div>
-        <div class="info-block__sub">Du mardi au samedi<br>10h – 14h · 17h – 22h</div>
-      </div>
+    <!-- LEFT : infos restaurant -->
+    <div class="resy-info">
+      <div class="resy-info__overlay"></div>
+      <div class="resy-info__content">
+        <div class="resy-info__tag">◇ Notre Maison</div>
+        <h2 class="resy-info__title">Venez vivre<br>l'expérience Kabana</h2>
+        <p class="resy-info__desc">Saveurs créoles, esprit lounge et chaleur des Antilles — au cœur de Destreland.</p>
 
-      <div class="info-block">
-        <div class="info-block__title">Adresse</div>
-        <div class="info-block__main">14, Rue des<br>Quatre-Vents</div>
-        <div class="info-block__sub">75006 Paris — Saint-Germain-des-Prés<br>Métro Odéon (ligne 4 &amp; 10)</div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-block__title">Services</div>
-        <div class="hours-grid">
-          <div class="hours-pill">
-            <div class="hours-pill__service">Déjeuner</div>
-            <div class="hours-pill__time">12h – 14h30</div>
+        <div class="info-contacts">
+          <div class="info-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <div class="info-contact-item__text">
+              <span class="info-contact-item__label">Adresse</span>
+              <a href="https://maps.google.com/?q=Centre+Commercial+Destreland+Baie-Mahault+Guadeloupe" target="_blank" rel="noopener">Centre commercial Destreland<br>Baie-Mahault 97122, Guadeloupe</a>
+            </div>
           </div>
-          <div class="hours-pill">
-            <div class="hours-pill__service">Dîner</div>
-            <div class="hours-pill__time">19h – 22h30</div>
+          <div class="info-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <div class="info-contact-item__text">
+              <span class="info-contact-item__label">Téléphone</span>
+              <a href="tel:+590690445050">+590 690 44-5050</a>
+            </div>
           </div>
-          <div class="hours-pill" style="grid-column:1/-1">
-            <div class="hours-pill__service">Jours d'ouverture</div>
-            <div class="hours-pill__time">Mardi – Samedi</div>
+          <div class="info-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 14.5h-1V11h1v5.5zm0-7h-1V8h1v1.5z"/></svg>
+            <div class="info-contact-item__text">
+              <span class="info-contact-item__label">Horaires</span>
+              Lun – Mer &nbsp;·&nbsp; 9h – 23h30<br>
+              Jeu – Sam &nbsp;·&nbsp; 9h – Minuit<br>
+              Dim &nbsp;·&nbsp; Fermé
+            </div>
+          </div>
+          <div class="info-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <div class="info-contact-item__text">
+              <span class="info-contact-item__label">Email</span>
+              <a href="mailto:contact@kabanahouse.fr">contact@kabanahouse.fr</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="info-block">
-        <div class="info-block__title">Email</div>
-        <div class="info-block__main" style="font-size:17px"><a href="mailto:contact@ardoise-paris.fr">contact@ardoise-paris.fr</a></div>
-      </div>
-
-      <div class="map-placeholder" onclick="window.open('https://maps.google.com/?q=Rue+des+Quatre-Vents+Paris')">
-        <div class="map-placeholder__icon">◎</div>
-        <div class="map-placeholder__text">Voir sur la carte</div>
+        <div class="info-map">
+          <iframe
+            src="https://maps.google.com/maps?q=Centre+Commercial+Destreland+Baie-Mahault+97122+Guadeloupe&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            title="Kabana House — Destreland">
+          </iframe>
+        </div>
       </div>
     </div>
 
-    <!-- FORMULAIRE -->
-    <div class="form-panel">
-      <div class="form-title">Demande de réservation</div>
-      <div class="form-subtitle">Remplissez le formulaire ci-dessous. Nous confirmons par email sous 2h.</div>
+    <!-- RIGHT : formulaire -->
+    <div class="resy-card">
+      <div class="resy-card__tag">◇ Demande de réservation</div>
+      <h2 class="resy-card__title">Réserver une table</h2>
+      <p class="resy-card__sub">Nous vous confirmons votre réservation par SMS sous 2h.</p>
 
       <form id="resy-form" onsubmit="submitForm(event)">
         <div class="form-row">
           <div class="field">
-            <label>Prénom</label>
-            <input type="text" placeholder="Jean" required />
+            <label for="f-name">Nom</label>
+            <input type="text" id="f-name" name="name" autocomplete="name" placeholder="Jean Dupont" required />
           </div>
           <div class="field">
-            <label>Nom</label>
-            <input type="text" placeholder="Dupont" required />
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" autocomplete="email" placeholder="jean@email.fr" required />
           </div>
         </div>
         <div class="form-row">
           <div class="field">
-            <label>Email</label>
-            <input type="email" id="f-email" placeholder="jean.dupont@email.fr" required />
+            <label for="f-tel">Téléphone *</label>
+            <input type="tel" id="f-tel" name="tel" autocomplete="tel" placeholder="+590 6 00 00 00 00" required />
           </div>
           <div class="field">
-            <label>Téléphone</label>
-            <input type="tel" placeholder="+33 6 00 00 00 00" />
+            <label for="f-persons">Personnes</label>
+            <input type="number" id="f-persons" name="persons" placeholder="2" min="1" max="30" required />
           </div>
         </div>
-        <div class="form-row three">
+        <div class="form-row">
           <div class="field">
-            <label>Date</label>
-            <input type="date" id="f-date" required onchange="resetAvail()" />
+            <label for="f-date">Date</label>
+            <input type="date" id="f-date" name="date" required />
           </div>
           <div class="field">
-            <label>Service</label>
-            <select id="f-service" onchange="resetAvail()">
-              <option value="">— Choisir —</option>
-              <optgroup label="Déjeuner">
-                <option value="12:15">12h15</option>
-                <option value="13:30">13h30</option>
-              </optgroup>
-              <optgroup label="Dîner">
-                <option value="19:30">19h30</option>
-                <option value="20:30">20h30</option>
-                <option value="21:15">21h15</option>
-              </optgroup>
-            </select>
-          </div>
-          <div class="field">
-            <label>Couverts</label>
-            <select id="f-guests" onchange="resetAvail()">
-              <option value="">—</option>
-              <option value="1">1 personne</option>
-              <option value="2">2 personnes</option>
-              <option value="3">3 personnes</option>
-              <option value="4">4 personnes</option>
-              <option value="5">5 personnes</option>
-              <option value="6">6 personnes</option>
-            </select>
+            <label for="f-time">Heure</label>
+            <input type="time" id="f-time" name="time" />
           </div>
         </div>
-        <div class="form-row single">
-          <div class="field">
-            <label>Occasion (optionnel)</label>
-            <select>
-              <option value="">— Aucune occasion particulière —</option>
-              <option>Anniversaire</option>
-              <option>Anniversaire de mariage</option>
-              <option>Repas d'affaires</option>
-              <option>Demande en mariage</option>
-              <option>Célébration</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-row single">
-          <div class="field">
-            <label>Allergies / demandes particulières</label>
-            <textarea placeholder="Intolérance au gluten, allergie aux crustacés…"></textarea>
-          </div>
+        <div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" />
         </div>
 
-        <!-- DISPONIBILITÉS -->
-        <div class="avail-section">
-          <button type="button" class="avail-btn" onclick="checkAvailability()">Vérifier les disponibilités</button>
-
-          <div class="avail-result" id="avail-result">
-            <div class="avail-result__title" id="avail-title">Disponibilités · —</div>
-            <div class="avail-slots" id="avail-slots"></div>
-          </div>
-
-          <button type="submit" class="submit-btn">Confirmer la demande</button>
-
-          <div class="success-msg" id="success-msg">
-            <div class="success-msg__icon">✓</div>
-            <div class="success-msg__title">Demande envoyée</div>
-            <div class="success-msg__text">Nous avons bien reçu votre demande de réservation.<br>Une confirmation vous sera adressée par email dans les 2 heures.</div>
-          </div>
-        </div>
+        <div class="avail-chip" id="avail-chip" role="status" aria-live="polite"></div>
+        <button type="button" class="check-btn" onclick="checkAvail()">Vérifier les disponibilités</button>
+        <button type="submit" class="resy-btn">Réserver une table</button>
       </form>
+
+      <div class="success-msg" id="success-msg">
+        <div class="success-icon">✓</div>
+        <div class="success-title">Réservation envoyée</div>
+        <div class="success-ref"><span id="success-ref-num">KH-0000</span></div>
+        <div class="success-recap" id="success-recap"></div>
+        <p class="success-note">Notre équipe vous confirme la réservation par SMS sous 2h.<br>Pour toute question : <a href="tel:+590690445050" style="color:var(--gold)">+590 690 44-5050</a></p>
+      </div>
     </div>
+
   </div>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__top">
       <div>
-        <div class="footer__logo">Ardoise</div>
-        <div class="footer__tagline">La cuisine de l'essentiel</div>
+        <div class="footer__logo">Kabana House</div>
+        <div class="footer__tagline">Saveurs des Antilles · Esprit Lounge</div>
       </div>
       <div>
         <div class="footer__col-title">Navigation</div>
         <ul class="footer__links">
           <li><a href="index.html">Accueil</a></li>
           <li><a href="menu.html">Le menu</a></li>
-          <li><a href="about.html">À propos</a></li>
+          <li><a href="about.html">Notre Maison</a></li>
           <li><a href="reservation.html">Réservation</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
         </ul>
       </div>
       <div>
         <div class="footer__col-title">Nous trouver</div>
         <div class="footer__info">
-          <p>14, Rue des Quatre-Vents<br>75006 Paris</p>
-          <p style="margin-top:10px"><a href="tel:+33142687420">+33 1 42 68 74 20</a></p>
-          <p><a href="mailto:contact@ardoise-paris.fr">contact@ardoise-paris.fr</a></p>
-          <p style="margin-top:10px; font-size:11px; opacity:.6">Mar – Sam · 12h–14h30 · 19h–22h30</p>
+          <p>Centre commercial Destreland<br>Baie-Mahault 97122, Guadeloupe</p>
+          <p style="margin-top:10px"><a href="tel:+590690445050">+590 690 44-5050</a></p>
+          <p><a href="mailto:contact@kabanahouse.fr">contact@kabanahouse.fr</a></p>
+          <p style="margin-top:10px; font-size:11px; opacity:.6">Lun – Mer · 9h–23h30 · Jeu – Sam · 9h–Minuit</p>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
-      <div class="footer__copy">© 2026 Ardoise · Restaurant Gastronomique · Paris</div>
+      <div class="footer__copy">© 2026 Kabana House · Restaurant Lounge · Baie-Mahault, Guadeloupe</div>
       <div class="footer__social">
-        <a href="#"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-        <a href="#"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://www.instagram.com/kabana.house/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://www.tiktok.com/@kabana_house" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.3a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.18 8.18 0 0 0 4.78 1.52V6.79a4.85 4.85 0 0 1-1.02-.1z"/></svg></a>
       </div>
     </div>
   </footer>
 
-<script>
-  /* ── Système de disponibilités ─────────────────────────────── */
-  const TABLES = { 2: 4, 4: 3, 6: 1 };
-
-  const BOOKED = {
-    '2026-05-22': { '19:30': {2:3,4:2}, '20:30': {2:2,4:1}, '12:15': {2:1} },
-    '2026-05-23': { '19:30': {2:4,4:3,6:1}, '12:15': {2:2,4:1} },
-    '2026-05-24': { '20:30': {2:2,4:1}, '21:15': {2:1}, '13:30': {2:1,4:1} },
-    '2026-05-26': { '19:30': {2:3,4:2}, '20:30': {2:4,4:3} },
-    '2026-05-27': { '19:30': {2:4,4:3,6:1}, '12:15': {2:3,4:2,6:1} },
-    '2026-05-28': { '20:30': {2:2} },
-    '2026-05-29': { '19:30': {2:2,4:1}, '21:15': {2:1,4:1} },
-    '2026-05-30': { '19:30': {2:3,4:2}, '12:15': {2:2,4:2,6:1} },
-  };
-
-  const SLOTS_LUNCH  = ['12:15','13:30'];
-  const SLOTS_DINNER = ['19:30','20:30','21:15'];
-  const SLOT_LABELS  = { '12:15':'12h15','13:30':'13h30','19:30':'19h30','20:30':'20h30','21:15':'21h15' };
-
-  function getAvailableCount(date, time, guests) {
-    const booked = (BOOKED[date] && BOOKED[date][time]) || {};
-    let total = 0;
-    for (const [size, count] of Object.entries(TABLES)) {
-      if (parseInt(size) >= parseInt(guests)) {
-        total += count - (booked[size] || 0);
-      }
-    }
-    return Math.max(0, total);
-  }
-
-  function checkAvailability() {
-    const date   = document.getElementById('f-date').value;
-    const guests = document.getElementById('f-guests').value;
-
-    if (!date || !guests) {
-      alert('Veuillez renseigner une date et un nombre de couverts.');
-      return;
-    }
-
-    const d = new Date(date + 'T00:00:00');
-    const day = d.getDay(); // 0=dim, 6=sam, 1=lun fermé
-    if (day === 0 || day === 1) {
-      document.getElementById('avail-title').textContent = 'Fermé ce jour';
-      document.getElementById('avail-slots').innerHTML = '<div style="grid-column:1/-1;font-family:\'Jost\',sans-serif;font-weight:300;font-size:12px;color:var(--cream2);padding:12px 0">Ardoise est ouvert du mardi au samedi.</div>';
-      document.getElementById('avail-result').classList.add('visible');
-      return;
-    }
-
-    const allSlots = [...SLOTS_LUNCH, ...SLOTS_DINNER];
-    const formatted = d.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'});
-    document.getElementById('avail-title').textContent = `Disponibilités · ${formatted} · ${guests} couvert${guests>1?'s':''}`;
-
-    let html = '';
-    allSlots.forEach(slot => {
-      const count = getAvailableCount(date, slot, guests);
-      const label = slot < '15:00' ? 'Déjeuner' : 'Dîner';
-      const cls = count === 0 ? 'avail-slot full' : 'avail-slot open';
-      const countTxt = count === 0 ? 'Complet' : `${count} table${count>1?'s':''} dispo.`;
-      const btn = count > 0 ? `<button class="avail-slot__btn" onclick="selectSlot('${slot}')">Sélectionner</button>` : '';
-      html += `<div class="${cls}"><div class="avail-slot__time">${SLOT_LABELS[slot]}</div><div class="avail-slot__count">${countTxt}</div>${btn}</div>`;
-    });
-
-    document.getElementById('avail-slots').innerHTML = html;
-    document.getElementById('avail-result').classList.add('visible');
-  }
-
-  function selectSlot(slot) {
-    document.getElementById('f-service').value = slot;
-  }
-
-  function resetAvail() {
-    document.getElementById('avail-result').classList.remove('visible');
-  }
-
-  function submitForm(e) {
-    e.preventDefault();
-    document.getElementById('resy-form').style.opacity = '.5';
-    document.getElementById('resy-form').style.pointerEvents = 'none';
-    setTimeout(() => {
-      document.getElementById('success-msg').classList.add('visible');
-      document.getElementById('resy-form').style.opacity = '1';
-    }, 800);
-  }
-
-  /* date min = aujourd'hui */
-  document.getElementById('f-date').min = new Date().toISOString().split('T')[0];
-</script>
-
 <div class="nav-overlay" id="navOverlay">
   <button class="nav-overlay__close" aria-label="Fermer"><span></span><span></span></button>
   <nav class="nav-overlay__links">
-    <a href="index.html">Accueil</a>
-    <a href="menu.html">Menu</a>
-    <a href="reservation.html" class="active">Réservation</a>
-    <a href="about.html">Notre Restaurant</a>
+    <a href="index.html" data-label="Accueil"><span>Accueil</span></a>
+    <a href="menu.html" data-label="Menu"><span>Menu</span></a>
+    <a href="reservation.html" class="active" data-label="Réservation"><span>Réservation</span></a>
+    <a href="about.html" data-label="Notre Maison"><span>Notre Maison</span></a>
   </nav>
+  <a href="mentions-legales.html" style="margin-top:28px;font-family:'Jost',sans-serif;font-weight:300;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,191,173,.28);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='rgba(200,191,173,.55)'" onmouseout="this.style.color='rgba(200,191,173,.28)'">Mentions légales</a>
 </div>
 
+<script src="assets/js/cookie-banner.js" defer></script>
+<script>
+  var DAYS   = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
+  var MONTHS = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+
+  function formatDate(dateStr) {
+    var d = new Date(dateStr + 'T12:00:00');
+    return DAYS[d.getDay()] + ' ' + d.getDate() + ' ' + MONTHS[d.getMonth()];
+  }
+
+  function updateAvailChip(dateVal) {
+    var chip = document.getElementById('avail-chip');
+    chip.className = 'avail-chip';
+    if (!dateVal) return;
+
+    var d   = new Date(dateVal + 'T12:00:00');
+    var day = d.getDay();
+    var dot = '<span class="avail-chip__dot"></span>';
+    var label = formatDate(dateVal);
+
+    if (day === 0) {
+      chip.className = 'avail-chip none visible';
+      chip.innerHTML = dot + 'Fermé le ' + label + ' — nous ouvrons lun–sam';
+      return;
+    }
+
+    /* Nombre de tables pseudo-aléatoire mais stable pour une même date */
+    var seed  = d.getDate() + d.getMonth() * 31 + d.getFullYear() * 12;
+    var r     = ((seed * 9301 + 49297) % 233280) / 233280;
+    var spots = (day >= 5) ? Math.floor(r * 3) + 1 : Math.floor(r * 4) + 3;
+
+    if (spots <= 2) {
+      chip.className = 'avail-chip few visible';
+      chip.innerHTML = dot + 'Dernières places le ' + label + ' — plus que ' + spots + ' table' + (spots > 1 ? 's' : '');
+    } else {
+      chip.className = 'avail-chip ok visible';
+      chip.innerHTML = dot + 'Tables disponibles le ' + label;
+    }
+  }
+
+  function checkAvail() {
+    updateAvailChip(document.getElementById('f-date').value);
+  }
+
+  document.getElementById('f-date').addEventListener('change', function() {
+    updateAvailChip(this.value);
+  });
+
+  document.getElementById('f-date').min = new Date().toISOString().split('T')[0];
+
+  function submitForm(e) {
+    e.preventDefault();
+    if (document.querySelector('input[name="website"]').value) return;
+    var form    = document.getElementById('resy-form');
+    var name    = document.getElementById('f-name').value    || '—';
+    var email   = document.getElementById('f-email').value   || '—';
+    var persons = document.getElementById('f-persons').value || '—';
+    var dateVal = document.getElementById('f-date').value;
+    var timeVal = document.getElementById('f-time').value;
+
+    var dateLabel = dateVal ? formatDate(dateVal) : '—';
+    var ref = 'KH-' + Math.floor(1000 + Math.random() * 9000);
+
+    document.getElementById('success-ref-num').textContent = 'Réf. ' + ref;
+
+    var rows = [
+      ['Nom',       name],
+      ['Email',     email],
+      ['Date',      dateLabel],
+      ['Personnes', persons + ' personne' + (persons > 1 ? 's' : '')],
+    ];
+    if (timeVal) rows.push(['Heure', timeVal]);
+
+    document.getElementById('success-recap').innerHTML = rows.map(function(r) {
+      return '<div class="success-recap-row">'
+           + '<span class="success-recap-label">' + r[0] + '</span>'
+           + '<span class="success-recap-value">' + r[1] + '</span>'
+           + '</div>';
+    }).join('');
+
+    form.style.opacity = '.35';
+    form.style.pointerEvents = 'none';
+    setTimeout(function() {
+      form.style.display = 'none';
+      document.getElementById('success-msg').classList.add('visible');
+    }, 600);
+  }
+</script>
 <script>
 (function(){
   var burger  = document.querySelector('.nav__burger');
   var overlay = document.getElementById('navOverlay');
-  function openMenu()  { burger.classList.add('open');    overlay.classList.add('open');    document.body.style.overflow='hidden'; }
-  function closeMenu() { burger.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
+  function openMenu()  { burger.classList.add('open');    burger.setAttribute('aria-expanded','true');  overlay.classList.add('open');    document.body.style.overflow='hidden'; }
+  function closeMenu() { burger.classList.remove('open'); burger.setAttribute('aria-expanded','false'); overlay.classList.remove('open'); document.body.style.overflow=''; }
   function toggle()    { overlay.classList.contains('open') ? closeMenu() : openMenu(); }
   burger.addEventListener('click', toggle);
   document.querySelector('.nav-overlay__close').addEventListener('click', closeMenu);
