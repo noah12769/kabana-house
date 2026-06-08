@@ -3,54 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kabana House — Restaurant Lounge | Destreland, Baie-Mahault, Guadeloupe</title>
-  <meta name="description" content="Kabana House, restaurant lounge urbain à Destreland, Baie-Mahault. Cuisine créole, steaks premium, langouste, cocktails. Ouvert lun–mer 9h–23h30, jeu–sam 9h–minuit." />
-  <meta name="keywords" content="restaurant Baie-Mahault, restaurant Destreland, restaurant Guadeloupe, cuisine créole, steakhouse Guadeloupe, Kabana House, lounge Guadeloupe, restaurant Antilles" />
-  <meta property="og:title" content="Kabana House — Restaurant Lounge Guadeloupe" />
-  <meta property="og:description" content="Saveurs créoles, steaks premium et ambiance lounge au cœur de Destreland, Baie-Mahault." />
-  <meta property="og:type" content="restaurant" />
-  <meta property="og:url" content="https://www.kabanahouse.fr/" />
-  <meta name="geo.region" content="GP" />
-  <meta name="geo.placename" content="Baie-Mahault, Guadeloupe" />
-  <meta property="og:image" content="https://www.kabanahouse.fr/assets/images/salle-banquettes.jpg" />
-  <meta property="og:image:alt" content="Salle du restaurant Kabana House — Destreland, Guadeloupe" />
-  <meta property="og:locale" content="fr_FR" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Kabana House — Restaurant Lounge Guadeloupe" />
-  <meta name="twitter:description" content="Saveurs créoles, steaks premium et ambiance lounge au cœur de Destreland, Baie-Mahault." />
-  <meta name="twitter:image" content="https://www.kabanahouse.fr/assets/images/salle-banquettes.jpg" />
-  <meta name="theme-color" content="#0a0b0c" />
-  <link rel="canonical" href="https://www.kabanahouse.fr/" />
-  <link rel="preload" as="image" href="assets/images/salle-banquettes.jpg" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>ARDOISE — Restaurant Gastronomique</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Kabana House",
-    "description": "Restaurant lounge urbain à Destreland, Baie-Mahault. Cuisine créole, steaks premium, langouste, cocktails & mocktails.",
-    "url": "https://www.kabanahouse.fr",
-    "telephone": "+590690445050",
-    "email": "contact@kabanahouse.fr",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Centre Commercial Destreland",
-      "addressLocality": "Baie-Mahault",
-      "postalCode": "97122",
-      "addressCountry": "GP"
-    },
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"], "opens": "09:00", "closes": "23:30" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday","Friday","Saturday"], "opens": "09:00", "closes": "00:00" }
-    ],
-    "servesCuisine": ["Créole","Steakhouse","Fruits de mer","Caribéenne"],
-    "priceRange": "€€-€€€",
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.2", "reviewCount": "12", "bestRating": "5" },
-    "sameAs": ["https://www.instagram.com/kabana.house/","https://www.tiktok.com/@kabana_house","https://www.tripadvisor.fr/Restaurant_Review-g2589427-d34113046-Reviews-Kabana_House-Baie_Mahault_Basse_Terre_Island_Guadeloupe.html"]
-  }
-  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --ink:#0a0b0c; --cream:#f0ebe0; --cream2:#c8bfad; --r:18px; }
@@ -64,8 +21,8 @@
     .hero__left { position:relative; flex:1; border-radius:var(--r); overflow:hidden; }
     .hero__left__bg {
       position:absolute; inset:0;
-      background-image:url('assets/images/salle-banquettes.jpg');
-      background-size:cover; background-position:center 52%;
+      background-image:url('https://images.pexels.com/photos/5865244/pexels-photo-5865244.jpeg?auto=compress&cs=tinysrgb&w=1920');
+      background-size:cover; background-position:center 40%;
       transform:scale(1.02); transition:transform 8s ease;
     }
     .hero__left:hover .hero__left__bg { transform:scale(1.06); }
@@ -99,9 +56,9 @@
 
     /* HEADLINE */
     .hero__headline { position:absolute; bottom:48px; left:36px; z-index:10; line-height:.88; }
-    .hero__headline h1 { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(62px,8.5vw,108px); letter-spacing:-.01em; text-transform:uppercase; color:var(--cream); display:flex; flex-direction:column; }
-    .hero__headline h1 .hl-1 { display:block; animation:headlineFade 2.2s 0.6s ease both; }
-    .hero__headline h1 .hl-2 { display:block; animation:headlineFade 2.2s 1.1s ease both; }
+    .hero__headline h1 { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(62px,8.5vw,108px); letter-spacing:-.01em; text-transform:uppercase; color:var(--cream); display:block; }
+    .hero__headline h1:first-child { animation:headlineFade 2.2s 0.6s ease both; }
+    .hero__headline h1:last-child  { animation:headlineFade 2.2s 1.1s ease both; }
     @keyframes headlineFade { from{opacity:0} to{opacity:1} }
 
     /* SOCIAL */
@@ -117,9 +74,9 @@
     .panel { position:relative; flex:1; border-radius:var(--r); overflow:hidden; cursor:pointer; background:var(--ink); display:block; text-decoration:none; }
     .panel__photo { position:absolute; inset:0; background-size:cover; background-position:center; transition:transform .7s cubic-bezier(.25,.46,.45,.94); }
     .panel:hover .panel__photo { transform:scale(1.05); }
-    .panel--menu    .panel__photo { background-image:url('assets/images/langouste-pasta.jpg'); background-position:center; }
-    .panel--resy    .panel__photo { background-image:url('assets/images/resy-ambiance.jpg'); background-position:center 30%; }
-    .panel--resto   .panel__photo { background-image:url('assets/images/salle-table.jpg'); background-position:center; }
+    .panel--menu    .panel__photo { background-image:url('https://images.pexels.com/photos/2403392/pexels-photo-2403392.jpeg?auto=compress&cs=tinysrgb&w=800'); background-position:center 30%; }
+    .panel--resy    .panel__photo { background-image:url('https://images.pexels.com/photos/1850595/pexels-photo-1850595.jpeg?auto=compress&cs=tinysrgb&w=800'); background-position:center 20%; }
+    .panel--resto   .panel__photo { background-image:url('https://images.pexels.com/photos/4577692/pexels-photo-4577692.jpeg?auto=compress&cs=tinysrgb&w=800'); background-position:center; }
     .panel__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.62) 0%, rgba(0,0,0,.05) 50%, transparent 100%); }
     .panel__label { position:absolute; bottom:16px; right:18px; z-index:5; display:flex; align-items:center; gap:8px; font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--cream2); transition:color .2s, gap .25s; }
     .panel:hover .panel__label { color:var(--cream); gap:13px; }
@@ -184,8 +141,6 @@
     .nav__burger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4.5px); }
     .nav__burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .nav__burger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4.5px); }
-    .nav__burger:not(.open):hover span:nth-child(1) { transform: translateY(6px); }
-    .nav__burger:not(.open):hover span:nth-child(3) { transform: translateY(-6px); }
 
     /* ── OVERLAY NAVIGATION ──────────────────────────────── */
     .nav-overlay {
@@ -213,25 +168,28 @@
     .nav-overlay__close span:nth-child(2) { transform: rotate(-45deg); }
 
     .nav-overlay__links { display: flex; flex-direction: column; align-items: center; gap: 28px; width: 100%; padding: 0 20px; }
-    .nav-overlay__links a { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(28px,8vw,50px); letter-spacing:.05em; text-transform:uppercase; color:var(--cream); text-decoration:none; opacity:.45; display:block; text-align:center; width:100%; position:relative; overflow:hidden; line-height:1.12; transition:opacity .4s cubic-bezier(.16,1,.3,1); }
-    .nav-overlay__links a.active { opacity:.9; }
-    .nav-overlay__links a:hover { opacity:1; }
-    .nav-overlay__links a span { display:block; transition:transform .52s cubic-bezier(.16,1,.3,1); }
-    .nav-overlay__links a::after { content:attr(data-label); position:absolute; left:0; top:100%; width:100%; text-align:center; font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(28px,8vw,50px); letter-spacing:.05em; text-transform:uppercase; color:var(--cream); transition:transform .52s cubic-bezier(.16,1,.3,1); }
-    .nav-overlay__links a:hover span { transform:translateY(-100%); }
-    .nav-overlay__links a:hover::after { transform:translateY(-100%); }
+    .nav-overlay__links a {
+      font-family: 'Cormorant Garamond', serif; font-weight: 300;
+      font-size: clamp(28px, 8vw, 50px);
+      letter-spacing: .05em; text-transform: uppercase;
+      color: var(--cream); text-decoration: none;
+      opacity: .45; transition: opacity .25s, letter-spacing .35s;
+      display: block; text-align: center; width: 100%;
+    }
+    .nav-overlay__links a.active { opacity: .9; }
+    .nav-overlay__links a:hover { opacity: 1; letter-spacing: .08em; }
   </style>
 </head>
 <body>
-<section class="hero" role="main">
+<section class="hero">
 
   <div class="hero__left">
     <div class="hero__left__bg"></div>
     <div class="hero__left__overlay"></div>
 
     <nav class="nav">
-      <div class="nav__burger" role="button" tabindex="0" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></div>
-      <a class="nav__logo" href="index.html">Kabana</a>
+      <div class="nav__burger"><span></span><span></span><span></span></div>
+      <a class="nav__logo" href="index.html">Ardoise</a>
       <div class="nav__sep"></div>
       <ul class="nav__links">
         <li><a href="menu.html">Menu</a></li>
@@ -241,12 +199,14 @@
     </nav>
 
     <div class="hero__headline">
-      <h1><span class="hl-1">Saveurs</span><span class="hl-2">Créoles</span></h1>
+      <h1>Instinct</h1>
+      <h1>Culinaire</h1>
     </div>
 
     <div class="hero__social">
-      <a href="https://www.instagram.com/kabana.house/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-      <a href="https://www.tiktok.com/@kabana_house" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.3a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.18 8.18 0 0 0 4.78 1.52V6.79a4.85 4.85 0 0 1-1.02-.1z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg></a>
+      <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
     </div>
   </div>
 
@@ -264,7 +224,7 @@
     <a class="panel panel--resto" href="about.html">
       <div class="panel__photo"></div>
       <div class="panel__overlay"></div>
-      <div class="panel__label">Notre Maison <span class="arr">→</span></div>
+      <div class="panel__label">Notre restaurant <span class="arr">→</span></div>
     </a>
   </div>
 
@@ -273,21 +233,19 @@
 <div class="nav-overlay" id="navOverlay">
   <button class="nav-overlay__close" aria-label="Fermer"><span></span><span></span></button>
   <nav class="nav-overlay__links">
-    <a href="index.html" class="active" data-label="Accueil"><span>Accueil</span></a>
-    <a href="menu.html" data-label="Menu"><span>Menu</span></a>
-    <a href="reservation.html" data-label="Réserver"><span>Réserver</span></a>
-    <a href="about.html" data-label="Notre Maison"><span>Notre Maison</span></a>
+    <a href="index.html" class="active">Accueil</a>
+    <a href="menu.html">Menu</a>
+    <a href="reservation.html">Réservation</a>
+    <a href="about.html">Notre Restaurant</a>
   </nav>
-  <a href="mentions-legales.html" style="margin-top:28px;font-family:'Jost',sans-serif;font-weight:300;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,191,173,.28);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='rgba(200,191,173,.55)'" onmouseout="this.style.color='rgba(200,191,173,.28)'">Mentions légales</a>
 </div>
 
-<script src="assets/js/cookie-banner.js" defer></script>
 <script>
 (function(){
   var burger  = document.querySelector('.nav__burger');
   var overlay = document.getElementById('navOverlay');
-  function openMenu()  { burger.classList.add('open');    burger.setAttribute('aria-expanded','true');  overlay.classList.add('open');    document.body.style.overflow='hidden'; }
-  function closeMenu() { burger.classList.remove('open'); burger.setAttribute('aria-expanded','false'); overlay.classList.remove('open'); document.body.style.overflow=''; }
+  function openMenu()  { burger.classList.add('open');    overlay.classList.add('open');    document.body.style.overflow='hidden'; }
+  function closeMenu() { burger.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
   function toggle()    { overlay.classList.contains('open') ? closeMenu() : openMenu(); }
   burger.addEventListener('click', toggle);
   document.querySelector('.nav-overlay__close').addEventListener('click', closeMenu);
