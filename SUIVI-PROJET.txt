@@ -1,132 +1,135 @@
 ================================================================
   KABANA HOUSE — SUIVI PROJET SITE WEB
-  Dernière mise à jour : juin 2026
+  Dernière mise à jour : 8 juin 2026
 ================================================================
 
 ----------------------------------------------------------------
-  CE QUI A ÉTÉ RÉALISÉ
+  CE QUI A ÉTÉ RÉALISÉ — COMPLET
 ----------------------------------------------------------------
 
-STRUCTURE DU SITE
-  - index.html       Accueil (hero plein écran, panneaux de navigation)
-  - menu.html        Carte complète avec navigation par section
-  - reservation.html Formulaire de réservation (confirmation par SMS)
-  - about.html       Histoire et présentation de Kabana House
-  - mentions-legales.html  Page légale RGPD
+STRUCTURE DU SITE (5 pages)
+  ✓ index.html          Accueil (hero plein écran, panneaux navigation)
+  ✓ menu.html           Carte complète avec navigation par section
+  ✓ reservation.html    Formulaire de réservation (confirmation SMS simulée)
+  ✓ about.html          Histoire et présentation de Kabana House
+  ✓ mentions-legales.html  Page légale RGPD (champs client à remplir)
 
-PHOTOS (17 nouvelles images WEBP dans assets/images/)
-  - cocktails-coupes-bar.WEBP
-  - table-ronde-dressee.WEBP
-  - viande-grillee-assiette.WEBP
-  - terrasse-jour.WEBP
-  - terrasse-soir.WEBP
-  - burger-frites.WEBP
-  - table-repas-festif.WEBP
-  - bar-salle-vue.WEBP
-  - cocktails-coupes-jaunes.WEBP
-  - table-rose-bougie.WEBP
-  - dessert-sorbet.WEBP
-  - pizzas-vin.WEBP
-  - salade-bowl.WEBP
-  - salle-interieure-jour.WEBP
-  - terrasse-rose-jour.WEBP
-  - viande-grillee-salade.WEBP
-  - cocktails-varietes-bar.WEBP
+PHOTOS (37 images dans assets/images/)
+  ✓ 17 images WEBP nouvelles + images JPG d'origine
+  ✓ Formats optimisés : WEBP pour les nouvelles, JPG pour les classiques
 
 FONCTIONNALITÉS
-  - Carrousel photo infini (about.html) — 25 slides
-  - Navigation par section sur le menu avec scroll centré
-  - Formulaire de réservation avec honeypot anti-spam
-  - Bandeau cookie RGPD (assets/js/cookie-banner.js)
-  - Overlay navigation animé (burger menu)
+  ✓ Carrousel photo infini sur about.html
+      - Desktop : 1 bande, 400px de hauteur, défilement vers la droite
+      - Mobile (≤768px) : 2 bandes, 195px chacune, bande 1→droite / bande 2←gauche
+      - Pause au survol, respect de prefers-reduced-motion
+  ✓ Navigation par section sur menu.html avec scroll centré
+  ✓ Formulaire de réservation avec honeypot anti-spam
+  ✓ Bandeau cookie RGPD (assets/js/cookie-banner.js)
+  ✓ Overlay navigation animé (burger menu)
+  ✓ Favicon : favicon.png (logo converti PNG, toutes les 5 pages)
+  ✓ Social preview : og:image et twitter:image → logo.jpg (toutes les pages)
 
 SEO / TECHNIQUE
-  - Balises meta og:image, og:url, og:type, og:locale sur les 4 pages
-  - Twitter Cards sur les 4 pages
-  - Canonical URLs
-  - sitemap.xml avec 4 URLs
-  - robots.txt avec référence au sitemap
-  - Schema.org Restaurant (JSON-LD) sur l'accueil
-  - Preload LCP image sur l'accueil
-  - Hiérarchie H1 correcte sur toutes les pages
+  ✓ Balises Open Graph (og:title, og:description, og:image, og:url, og:locale) — 5 pages
+  ✓ Twitter Cards — 5 pages
+  ✓ Canonical URLs — 5 pages
+  ✓ sitemap.xml avec 5 URLs
+  ✓ robots.txt — BLOQUE tout indexation (Disallow: /) ← mis à jour 8 juin
+  ✓ Meta robots noindex, nofollow sur TOUTES les pages ← ajouté 8 juin
+  ✓ Schema.org Restaurant (JSON-LD) sur accueil et about.html
+  ✓ Preload LCP image sur l'accueil
+  ✓ Hiérarchie H1 correcte sur toutes les pages
+  ✓ Mots-clés : restaurant Guadeloupe, Destreland, Baie-Mahault, steakhouse,
+                 cuisine créole, langouste, cocktails
+
+ACCESSIBILITÉ (WCAG 2.1 AA / RGAA)
+  ✓ Skip link "Passer au contenu principal" — 5 pages
+  ✓ :focus-visible (contour doré au clavier) — 5 pages
+  ✓ prefers-reduced-motion (désactive animations si demandé) — 5 pages
+  ✓ aria-label sur toutes les nav et boutons
+  ✓ aria-current="page" sur le lien actif
+  ✓ aria-expanded sur le bouton burger
+  ✓ role="dialog" aria-modal sur l'overlay navigation
+  ✓ aria-hidden sur le carousel (décoratif)
+  ✓ role="main" sur les blocs de contenu
+  ✓ Labels for/id sur tous les champs formulaire
+  ✓ Tailles de texte augmentées pour lisibilité :
+      - Corps de texte : 13px → 15px
+      - Descriptions menu : 13px → 15px
+      - Timeline / bio chef : 12px → 14px
+      - Champs formulaire : 13px → 15px
+      - Footer : 12px → 13px
 
 SÉCURITÉ
-  - .htaccess Apache : headers X-Frame-Options, CSP, Referrer-Policy,
+  ✓ .htaccess Apache : headers X-Frame-Options, CSP, Referrer-Policy,
     Permissions-Policy, HTTPS forcé, cache navigateur, compression Gzip
 
-ACCESSIBILITÉ
-  - Labels for/id sur tous les champs du formulaire
-  - aria-label et aria-expanded sur les boutons burger
-  - role="main" sur les blocs de contenu
-  - aria-live="polite" sur le chip de disponibilité
-
 RÉSEAUX SOCIAUX
-  - Instagram : https://www.instagram.com/kabana.house/
-  - TikTok    : https://www.tiktok.com/@kabana_house
-  - Schema.org sameAs mis à jour
+  ✓ Instagram : https://www.instagram.com/kabana.house/
+  ✓ TikTok    : https://www.tiktok.com/@kabana_house
+  ✓ Schema.org sameAs configuré
+
+DÉPLOIEMENT
+  ✓ GitHub    : https://github.com/noah12769/kabana-house (branche main)
+  ✓ Vercel    : https://kabana-house.vercel.app (production)
+  ✓ Dernier déploiement : 8 juin 2026
 
 ----------------------------------------------------------------
-  À COMPLÉTER PAR LE CLIENT — URGENT avant mise en ligne
+  EN ATTENTE — CLIENT DOIT FOURNIR
 ----------------------------------------------------------------
 
 1. PAGE MENTIONS LÉGALES (mentions-legales.html)
-   Les champs suivants sont marqués [À COMPLÉTER] dans le fichier :
-
-   a) Forme juridique
-      Ex. : SAS / SARL / EURL / EI / Auto-entrepreneur
-
-   b) Numéro SIRET (14 chiffres)
-
-   c) Numéro RCS
-      Ex. : RCS Pointe-à-Pitre B XXX XXX XXX
-
-   d) Capital social
-      Ex. : 10 000 €
-
-   e) Directeur de la publication
-      Le représentant légal de la société
-      (nom du gérant ou président)
-
-   f) Hébergeur du site
-      Nom de la société, adresse, site web
-      (OVH, Ionos, Infomaniak, Vercel, etc.)
+   Champs marqués [À COMPLÉTER] dans le fichier :
+   - Forme juridique  (ex. SAS / SARL / EURL / EI)
+   - Numéro SIRET     (14 chiffres)
+   - Numéro RCS       (ex. RCS Pointe-à-Pitre B XXX XXX XXX)
+   - Capital social   (ex. 10 000 €)
+   - Directeur de publication  (nom du gérant ou président)
+   → La page a déjà noindex — elle ne sera pas indexée avant que
+     le client remplisse ces champs
 
 2. FORMULAIRE DE RÉSERVATION
-   Actuellement : simulation côté navigateur uniquement.
-   À connecter à un logiciel de réservation (Zenchef, TheFork,
-   Resy, etc.) ou à un backend pour que les demandes arrivent
-   vraiment en cuisine/accueil.
+   Actuellement simulé côté navigateur uniquement.
+   À connecter à : Zenchef / TheFork / Resy / ou backend email
+   pour que les demandes arrivent vraiment au restaurant.
 
 ----------------------------------------------------------------
-  À FAIRE APRÈS VALIDATION CLIENT
+  À FAIRE APRÈS OUVERTURE AU PUBLIC (retirer le noindex)
 ----------------------------------------------------------------
 
-3. ANALYTICS (Google Analytics GA4)
+3. ACTIVER L'INDEXATION GOOGLE
+   Quand le restaurant est prêt à être trouvé sur Google :
+   a) Dans robots.txt : remplacer "Disallow: /" par "Allow: /"
+   b) Supprimer la ligne <meta name="robots" content="noindex, nofollow">
+      dans les 5 fichiers HTML (ou changer en "index, follow")
+   c) Soumettre le sitemap dans Google Search Console
+
+4. ANALYTICS (Google Analytics GA4)
    - Créer un compte sur analytics.google.com
    - Récupérer l'ID de mesure (format G-XXXXXXXXXX)
    - L'insérer dans les 5 pages HTML
    - Activer dans la bannière cookie (consentement avant activation)
-   - Enregistrer le site sur Google Search Console
 
-4. COMPRESSION DES IMAGES LEGACY
-   Les fichiers JPG d'origine pourraient être optimisés :
-   - assets/images/salle-banquettes.jpg
-   - assets/images/bar.jpg
-   - assets/images/langouste.jpg
-   - Outil recommandé : squoosh.app ou imageoptim
+5. DOMAINE www.kabanahouse.fr
+   - Connecter le domaine au projet Vercel
+   - Vérifier le certificat SSL actif
+   - Tester la redirection HTTP → HTTPS
 
-5. CERTIFICATION SSL / HTTPS
-   Vérifier que le certificat SSL est bien actif sur l'hébergeur.
-   Le .htaccess force la redirection HTTP → HTTPS automatiquement.
+6. COMPRESSION IMAGES LEGACY (optionnel)
+   JPG d'origine peuvent être optimisés :
+   - salle-banquettes.jpg, bar.jpg, langouste.jpg
+   - Outil : squoosh.app ou imageoptim
 
 ----------------------------------------------------------------
   INFORMATIONS TECHNIQUES
 ----------------------------------------------------------------
 
-  URL de production : https://www.kabanahouse.fr
-  Technologies      : HTML / CSS / JavaScript (vanilla, sans framework)
-  Polices           : Cormorant Garamond + Jost (Google Fonts)
-  Hébergement       : [À confirmer par le client]
+  URL de démo (Vercel) : https://kabana-house.vercel.app
+  URL finale (domaine)  : https://www.kabanahouse.fr
+  Technologies          : HTML / CSS / JavaScript vanilla
+  Polices               : Cormorant Garamond + Jost (Google Fonts)
+  Hébergement           : Vercel (à confirmer domaine final)
 
 ----------------------------------------------------------------
   CONTACTS PROJET
