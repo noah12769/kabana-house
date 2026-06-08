@@ -3,8 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow" />
-  <title>Menu — ARDOISE</title>
+  <title>Menu — Kabana House | Restaurant Lounge Destreland, Guadeloupe</title>
+  <meta name="description" content="Découvrez la carte de Kabana House : steaks premium, langouste, tartare d'espadon, colombo, burger signature, cocktails créoles. Restaurant lounge à Destreland, Baie-Mahault." />
+  <meta property="og:title" content="Menu — Kabana House | Cuisine Créole & Lounge" />
+  <meta property="og:description" content="Steaks, langouste, spécialités créoles, pizzas, burgers et cocktails au Kabana House, Destreland, Guadeloupe." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.kabanahouse.fr/menu.html" />
+  <meta name="geo.region" content="GP" />
+  <meta name="geo.placename" content="Baie-Mahault, Guadeloupe" />
+  <meta property="og:image" content="https://www.kabanahouse.fr/assets/images/langouste.jpg" />
+  <meta property="og:image:alt" content="Langouste grillée — Kabana House, Guadeloupe" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Menu — Kabana House | Cuisine Créole & Lounge" />
+  <meta name="twitter:description" content="Steaks, langouste, spécialités créoles, pizzas, burgers et cocktails au Kabana House, Destreland, Guadeloupe." />
+  <meta name="twitter:image" content="https://www.kabanahouse.fr/assets/images/langouste.jpg" />
+  <meta name="theme-color" content="#0a0b0c" />
+  <link rel="canonical" href="https://www.kabanahouse.fr/menu.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
@@ -13,18 +28,11 @@
     :root { --ink:#0a0b0c; --cream:#f0ebe0; --cream2:#c8bfad; --gold:#b8a98a; --r:18px; }
 
     html { background:var(--ink); }
-    body { background:var(--ink); padding:10px; min-height:100vh; font-family:'Jost',sans-serif; }
+    body { background:var(--ink); padding:10px; min-height:100dvh; font-family:'Jost',sans-serif; }
 
-    /* ── NAV PILL ─────────────────────────────────────────────── */
+    /* NAV */
     .nav-wrap { position:sticky; top:0; z-index:100; padding:0 0 10px 0; pointer-events:none; }
-    .nav {
-      display:inline-flex; align-items:center; gap:4px;
-      padding:9px 12px 9px 16px;
-      background:rgba(8,7,6,.72); backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
-      border:1px solid rgba(240,235,224,.1); border-radius:999px;
-      box-shadow:0 4px 24px rgba(0,0,0,.5);
-      pointer-events:all;
-    }
+    .nav { display:inline-flex; align-items:center; gap:4px; padding:9px 12px 9px 16px; background:rgba(8,7,6,.72); backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px); border:1px solid rgba(240,235,224,.1); border-radius:999px; box-shadow:0 4px 24px rgba(0,0,0,.5); pointer-events:all; }
     .nav__burger { display:flex; flex-direction:column; gap:4.5px; cursor:pointer; padding:4px 6px; border-radius:999px; transition:background .2s; }
     .nav__burger:hover { background:rgba(240,235,224,.08); }
     .nav__burger span { display:block; width:18px; height:1.5px; background:var(--cream); }
@@ -35,88 +43,110 @@
     .nav__links a:hover { color:var(--cream); background:rgba(240,235,224,.1); }
     .nav__links a.active { color:var(--cream); background:rgba(240,235,224,.14); }
 
-    /* ── HERO HEADER ──────────────────────────────────────────── */
+    /* HERO */
     .page-hero {
       position:relative; border-radius:var(--r); overflow:hidden;
       height:280px; margin-bottom:10px;
-      background-image:url('https://images.pexels.com/photos/5865244/pexels-photo-5865244.jpeg?auto=compress&cs=tinysrgb&w=1920');
+      background-image:url('assets/images/langouste.jpg');
       background-size:cover; background-position:center 45%;
     }
-    .page-hero__overlay {
-      position:absolute; inset:0;
-      background:linear-gradient(to top, rgba(0,0,0,.85) 0%, rgba(0,0,0,.4) 60%, rgba(0,0,0,.2) 100%);
-    }
+    .page-hero__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.88) 0%, rgba(0,0,0,.4) 60%, rgba(0,0,0,.2) 100%); }
     .page-hero__content { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; padding:36px 44px; }
     .page-hero__eyebrow { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
     .page-hero__title { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(52px,6vw,80px); letter-spacing:-.01em; text-transform:uppercase; color:var(--cream); line-height:.9; }
 
-    /* ── MENU TABS ────────────────────────────────────────────── */
-    .menu-tabs { display:flex; gap:10px; margin-bottom:10px; }
-    .menu-tab {
-      flex:1; padding:20px 24px; border-radius:var(--r); cursor:pointer;
-      background:rgba(255,255,255,.03); border:1px solid rgba(240,235,224,.07);
-      transition:background .2s, border-color .2s;
-      text-align:left;
+    /* SECTION NAV */
+    .section-nav {
+      position:sticky; top:68px; z-index:90;
+      margin-bottom:10px; overflow:hidden;
     }
-    .menu-tab:hover, .menu-tab.active { background:rgba(255,255,255,.06); border-color:rgba(240,235,224,.15); }
-    .menu-tab__name { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:22px; color:var(--cream); letter-spacing:.04em; margin-bottom:4px; }
-    .menu-tab__sub { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--cream2); }
-    .menu-tab__price { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; color:var(--gold); margin-top:8px; }
+    .section-nav__inner {
+      display:flex; gap:6px; overflow-x:auto; padding:14px 20px;
+      background:rgba(10,9,8,.88); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+      border:1px solid rgba(240,235,224,.07); border-radius:var(--r);
+      scrollbar-width:none;
+    }
+    .section-nav__inner::-webkit-scrollbar { display:none; }
+    .snav-link {
+      flex-shrink:0; padding:8px 18px; border-radius:999px;
+      font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.2em; text-transform:uppercase;
+      color:rgba(240,235,224,.5); text-decoration:none;
+      border:1px solid rgba(240,235,224,.08);
+      transition:background .2s, color .2s, border-color .2s;
+    }
+    .snav-link:hover { color:var(--cream); background:rgba(240,235,224,.07); }
+    .snav-link.active { color:var(--cream); background:rgba(184,169,138,.14); border-color:rgba(184,169,138,.3); }
 
-    /* ── MENU CARD (the "image" of the menu) ──────────────────── */
-    .menu-display { display:none; }
-    .menu-display.active { display:block; }
+    /* MENU BODY */
+    .menu-body { display:flex; flex-direction:column; gap:10px; margin-bottom:10px; }
 
-    .menu-card {
+    /* SECTION BLOCK */
+    .menu-section {
       border-radius:var(--r);
       background:rgba(255,255,255,.025);
       border:1px solid rgba(240,235,224,.07);
       overflow:hidden;
     }
 
-    .menu-card__header {
-      padding:44px 56px 36px;
-      border-bottom:1px solid rgba(240,235,224,.07);
-      display:flex; justify-content:space-between; align-items:flex-end;
-      background:rgba(255,255,255,.02);
+    .section-header {
+      padding:36px 48px 28px;
+      border-bottom:1px solid rgba(240,235,224,.06);
+      display:flex; align-items:flex-end; gap:24px;
     }
-    .menu-card__restaurant { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:13px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); }
-    .menu-card__title { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:32px; color:var(--cream); margin-top:6px; }
-    .menu-card__services { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--cream2); text-align:right; }
-    .menu-card__price-main { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:28px; color:var(--gold); text-align:right; margin-top:4px; }
+    .section-header__left { flex:1; }
+    .section-tag { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
+    .section-title { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(30px,3.5vw,42px); letter-spacing:.02em; background:linear-gradient(110deg, var(--cream) 40%, var(--gold) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .section-photo {
+      width:140px; height:105px; border-radius:10px;
+      background-size:cover; background-position:center 40%;
+      flex-shrink:0; opacity:.75;
+    }
 
-    .menu-card__body { padding:0 56px; }
-
-    .course {
-      display:grid; grid-template-columns:1fr auto;
-      gap:12px 24px; align-items:baseline;
-      padding:26px 0;
+    /* ITEMS GRID */
+    .items-grid {
+      display:grid; grid-template-columns:1fr 1fr;
+      gap:0;
+    }
+    .menu-item {
+      padding:24px 48px;
+      border-right:1px solid rgba(240,235,224,.05);
       border-bottom:1px solid rgba(240,235,224,.05);
+      transition:background .2s;
     }
-    .course:last-child { border-bottom:none; }
-    .course__num { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); opacity:.7; grid-column:1; }
-    .course__dot { grid-column:2; display:none; }
-    .course__name { font-family:'Cormorant Garamond',serif; font-weight:500; font-size:18px; color:var(--cream); letter-spacing:.02em; grid-column:1; }
-    .course__desc { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:14px; color:var(--cream2); line-height:1.5; margin-top:3px; grid-column:1; }
-    .course__tag { grid-column:2; grid-row:2/4; font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.15em; text-transform:uppercase; color:rgba(200,191,173,.4); align-self:center; white-space:nowrap; }
+    .menu-item:nth-child(even) { border-right:none; }
+    .menu-item:nth-last-child(1),
+    .menu-item:nth-last-child(2) { border-bottom:none; }
+    .menu-item:hover { background:rgba(255,255,255,.02); }
 
-    .menu-card__footer {
-      padding:28px 56px 36px;
-      border-top:1px solid rgba(240,235,224,.07);
-      display:flex; justify-content:space-between; align-items:center;
-      background:rgba(255,255,255,.02);
-    }
-    .menu-card__accord { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--cream2); }
-    .menu-card__accord span { color:var(--gold); }
-    .menu-card__note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:12px; color:rgba(200,191,173,.5); max-width:340px; text-align:right; line-height:1.6; }
+    .item-top { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:6px; }
+    .item-name { font-family:'Cormorant Garamond',serif; font-weight:500; font-size:17px; color:var(--cream); letter-spacing:.01em; flex:1; }
+    .item-price { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:17px; color:var(--gold); white-space:nowrap; flex-shrink:0; }
+    .item-desc { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:13px; color:rgba(200,191,173,.5); line-height:1.5; }
+    .item-badge { display:inline-block; margin-top:8px; padding:3px 10px; border-radius:999px; font-family:'Jost',sans-serif; font-size:8px; letter-spacing:.2em; text-transform:uppercase; background:rgba(184,169,138,.1); color:var(--gold); border:1px solid rgba(184,169,138,.2); }
 
-    /* ── FOOTER ───────────────────────────────────────────────── */
-    .footer {
-      margin-top:10px; border-radius:var(--r);
-      background:rgba(15,12,10,.7); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
-      border:1px solid rgba(240,235,224,.07);
-      padding:36px 44px 28px;
+    /* PHOTO BAND */
+    .photo-band {
+      position:relative; border-radius:var(--r); overflow:hidden;
+      height:260px; margin-bottom:0;
     }
+    .photo-band__img {
+      position:absolute; inset:0;
+      background-size:cover; background-position:center;
+    }
+    .photo-band__overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(to bottom, rgba(10,9,8,.1) 0%, rgba(10,9,8,.55) 100%);
+    }
+    .photo-band__label {
+      position:absolute; inset:0;
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Cormorant Garamond',serif; font-style:italic;
+      font-size:clamp(16px,2vw,24px); letter-spacing:.2em;
+      color:rgba(240,235,224,.5); pointer-events:none;
+    }
+
+    /* FOOTER */
+    .footer { margin-top:10px; border-radius:var(--r); background:rgba(15,12,10,.7); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(240,235,224,.07); padding:36px 44px 28px; }
     .footer__top { display:grid; grid-template-columns:1fr 1fr 1fr; gap:40px; margin-bottom:28px; }
     .footer__logo { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:28px; letter-spacing:.18em; text-transform:uppercase; color:var(--cream); margin-bottom:8px; }
     .footer__tagline { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:13px; color:var(--gold); }
@@ -134,80 +164,61 @@
     .footer__social a:hover { color:var(--cream); }
     .footer__social svg { width:14px; height:14px; fill:currentColor; }
 
-    /* ── RESPONSIVE ───────────────────────────────────────────── */
-    @media (max-width: 900px) {
-      .menu-tabs { gap: 8px; }
-      .menu-card__header { padding: 32px 36px 24px; }
-      .menu-card__body { padding: 0 36px; }
-      .menu-card__footer { padding: 20px 36px 28px; }
+    /* RESPONSIVE */
+    @media (max-width:900px) {
+      .items-grid { grid-template-columns:1fr; }
+      .menu-item { border-right:none; }
+      .menu-item:nth-last-child(2) { border-bottom:1px solid rgba(240,235,224,.05); }
+      .menu-item:nth-last-child(1) { border-bottom:none; }
+      .section-photo { display:none; }
+      .photo-band { height:200px; }
+    }
+    @media (max-width:700px) {
+      body { padding:8px; }
+      .nav { padding:8px 10px 8px 12px; }
+      .nav__logo { font-size:16px; letter-spacing:.2em; }
+      .nav__links a { padding:6px 8px; font-size:9.5px; letter-spacing:.12em; }
+      .page-hero { height:180px; }
+      .page-hero__content { padding:24px 28px; }
+      .page-hero__title { font-size:clamp(36px,10vw,56px); }
+      .section-header { padding:28px 28px 22px; }
+      .menu-item { padding:20px 28px; }
+      .footer__top { grid-template-columns:1fr; gap:24px; }
+      .footer { padding:28px 24px 20px; }
+      .photo-band { height:160px; }
+    }
+    @media (max-width:480px) {
+      .nav { padding:7px 9px 7px 12px; gap:2px; }
+      .nav__logo { font-size:13px; letter-spacing:.15em; }
+      .nav__sep { margin:0 3px; }
+      .nav__links a { font-size:8px; letter-spacing:.09em; padding:5px 6px; }
+      .section-header { padding:24px 20px 18px; }
+      .menu-item { padding:18px 20px; }
     }
 
-    @media (max-width: 700px) {
-      body { padding: 8px; }
-      .nav { padding: 8px 10px 8px 12px; }
-      .nav__logo { font-size: 16px; letter-spacing: .2em; }
-      .nav__links a { padding: 6px 8px; font-size: 9.5px; letter-spacing: .12em; }
-      .page-hero { height: 180px; }
-      .page-hero__content { padding: 24px 28px; }
-      .page-hero__title { font-size: clamp(36px, 10vw, 56px); }
-      .menu-tabs { flex-direction: column; }
-      .menu-tab { padding: 16px 20px; }
-      .menu-card__header { flex-direction: column; gap: 10px; padding: 28px 24px 20px; }
-      .menu-card__services, .menu-card__price-main { text-align: left; }
-      .menu-card__body { padding: 0 24px; }
-      .course { padding: 20px 0; }
-      .course__tag { display: none; }
-      .menu-card__footer { flex-direction: column; gap: 12px; padding: 20px 24px 28px; }
-      .menu-card__note { text-align: left; max-width: 100%; }
-      .footer__top { grid-template-columns: 1fr; gap: 24px; }
-      .footer { padding: 28px 24px 20px; }
-    }
+    /* BURGER */
+    .nav__burger span { transition:transform .35s cubic-bezier(.16,1,.3,1), opacity .25s; }
+    .nav__burger.open span:nth-child(1) { transform:rotate(45deg) translate(4px,4.5px); }
+    .nav__burger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .nav__burger.open span:nth-child(3) { transform:rotate(-45deg) translate(4px,-4.5px); }
+    .nav__burger:not(.open):hover span:nth-child(1) { transform:translateY(6px); }
+    .nav__burger:not(.open):hover span:nth-child(3) { transform:translateY(-6px); }
 
-    @media (max-width: 480px) {
-      .nav { padding: 7px 9px 7px 12px; gap: 2px; }
-      .nav__logo { font-size: 13px; letter-spacing: .15em; }
-      .nav__sep { margin: 0 3px; }
-      .nav__links a { font-size: 8px; letter-spacing: .09em; padding: 5px 6px; }
-    }
-
-    /* ── BURGER → CROIX ──────────────────────────────────── */
-    .nav__burger span { transition: transform .35s cubic-bezier(.16,1,.3,1), opacity .25s; }
-    .nav__burger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4.5px); }
-    .nav__burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    .nav__burger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4.5px); }
-
-    /* ── OVERLAY NAVIGATION ──────────────────────────────── */
-    .nav-overlay {
-      position: fixed; inset: 0; z-index: 9999;
-      background: rgba(10,11,12,.96);
-      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      opacity: 0; pointer-events: none;
-      transition: opacity .4s cubic-bezier(.16,1,.3,1);
-    }
-    .nav-overlay.open { opacity: 1; pointer-events: all; }
-    .nav-overlay__close {
-      position: absolute; top: 20px; left: 20px;
-      width: 44px; height: 40px;
-      background: rgba(8,7,6,.58); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
-      border: 1px solid rgba(240,235,224,.1); border-radius: 999px;
-      box-shadow: 0 4px 24px rgba(0,0,0,.5);
-      cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0;
-    }
-    .nav-overlay__close span { position: absolute; display: block; width: 18px; height: 1.5px; background: var(--cream); }
-    .nav-overlay__close span:nth-child(1) { transform: rotate(45deg); }
-    .nav-overlay__close span:nth-child(2) { transform: rotate(-45deg); }
-    .nav-overlay__links { display: flex; flex-direction: column; align-items: center; gap: 28px; width: 100%; padding: 0 20px; }
-    .nav-overlay__links a {
-      font-family: 'Cormorant Garamond', serif; font-weight: 300;
-      font-size: clamp(28px, 8vw, 50px);
-      letter-spacing: .05em; text-transform: uppercase;
-      color: var(--cream); text-decoration: none;
-      opacity: .45; transition: opacity .25s, letter-spacing .35s;
-      display: block; text-align: center; width: 100%;
-    }
-    .nav-overlay__links a.active { opacity: .9; }
-    .nav-overlay__links a:hover { opacity: 1; letter-spacing: .08em; }
+    /* OVERLAY */
+    .nav-overlay { position:fixed; inset:0; z-index:9999; background:rgba(10,11,12,.96); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); display:flex; flex-direction:column; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .4s cubic-bezier(.16,1,.3,1); }
+    .nav-overlay.open { opacity:1; pointer-events:all; }
+    .nav-overlay__close { position:absolute; top:20px; left:20px; width:44px; height:40px; background:rgba(8,7,6,.58); backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px); border:1px solid rgba(240,235,224,.1); border-radius:999px; box-shadow:0 4px 24px rgba(0,0,0,.5); cursor:pointer; display:flex; align-items:center; justify-content:center; padding:0; }
+    .nav-overlay__close span { position:absolute; display:block; width:18px; height:1.5px; background:var(--cream); }
+    .nav-overlay__close span:nth-child(1) { transform:rotate(45deg); }
+    .nav-overlay__close span:nth-child(2) { transform:rotate(-45deg); }
+    .nav-overlay__links { display:flex; flex-direction:column; align-items:center; gap:28px; width:100%; padding:0 20px; }
+    .nav-overlay__links a { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(28px,8vw,50px); letter-spacing:.05em; text-transform:uppercase; color:var(--cream); text-decoration:none; opacity:.45; display:block; text-align:center; width:100%; position:relative; overflow:hidden; line-height:1.12; transition:opacity .4s cubic-bezier(.16,1,.3,1); }
+    .nav-overlay__links a.active { opacity:.9; }
+    .nav-overlay__links a:hover { opacity:1; }
+    .nav-overlay__links a span { display:block; transition:transform .52s cubic-bezier(.16,1,.3,1); }
+    .nav-overlay__links a::after { content:attr(data-label); position:absolute; left:0; top:100%; width:100%; text-align:center; font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(28px,8vw,50px); letter-spacing:.05em; text-transform:uppercase; color:var(--cream); transition:transform .52s cubic-bezier(.16,1,.3,1); }
+    .nav-overlay__links a:hover span { transform:translateY(-100%); }
+    .nav-overlay__links a:hover::after { transform:translateY(-100%); }
   </style>
 </head>
 <body>
@@ -215,8 +226,8 @@
   <!-- NAV -->
   <div class="nav-wrap">
     <nav class="nav">
-      <div class="nav__burger"><span></span><span></span><span></span></div>
-      <a class="nav__logo" href="index.html">Ardoise</a>
+      <div class="nav__burger" role="button" tabindex="0" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></div>
+      <a class="nav__logo" href="index.html">Kabana</a>
       <div class="nav__sep"></div>
       <ul class="nav__links">
         <li><a href="menu.html" class="active">Menu</a></li>
@@ -230,275 +241,579 @@
   <div class="page-hero">
     <div class="page-hero__overlay"></div>
     <div class="page-hero__content">
-      <div class="page-hero__eyebrow">Ardoise · Paris VI</div>
-      <div class="page-hero__title">Nos Menus</div>
+      <div class="page-hero__eyebrow">Kabana House · Destreland, Baie-Mahault</div>
+      <h1 class="page-hero__title">Notre Carte</h1>
     </div>
   </div>
 
-  <!-- MENU TABS -->
-  <div class="menu-tabs">
-    <button class="menu-tab active" onclick="switchMenu('degustation',this)">
-      <div class="menu-tab__name">Dégustation</div>
-      <div class="menu-tab__sub">9 services</div>
-      <div class="menu-tab__price">185 €</div>
-    </button>
-    <button class="menu-tab" onclick="switchMenu('blanche',this)">
-      <div class="menu-tab__name">Carte Blanche</div>
-      <div class="menu-tab__sub">12 services · Surprise du Chef</div>
-      <div class="menu-tab__price">225 €</div>
-    </button>
-    <button class="menu-tab" onclick="switchMenu('vegetal',this)">
-      <div class="menu-tab__name">Végétal</div>
-      <div class="menu-tab__sub">7 services</div>
-      <div class="menu-tab__price">155 €</div>
-    </button>
-  </div>
-
-  <!-- MENU DÉGUSTATION -->
-  <div class="menu-display active" id="menu-degustation">
-    <div class="menu-card">
-      <div class="menu-card__header">
-        <div>
-          <div class="menu-card__restaurant">Ardoise · ★★★</div>
-          <div class="menu-card__title">Menu Dégustation</div>
-        </div>
-        <div>
-          <div class="menu-card__services">9 services</div>
-          <div class="menu-card__price-main">185 €</div>
-        </div>
-      </div>
-      <div class="menu-card__body">
-        <div class="course">
-          <div class="course__num">I</div>
-          <div class="course__name">Amuse-bouche</div>
-          <div class="course__desc">Tuile au parmesan vieilli 36 mois, mousse de cèpe sauvage des Vosges, huile de truffe blanche</div>
-          <div class="course__tag">Maison</div>
-        </div>
-        <div class="course">
-          <div class="course__num">II</div>
-          <div class="course__name">Langoustines de Bretagne</div>
-          <div class="course__desc">En gelée d'agrumes et coriandre, caviar Osciètre de Gironde, crème légère de cerfeuil sauvage</div>
-          <div class="course__tag">Bretagne</div>
-        </div>
-        <div class="course">
-          <div class="course__num">III</div>
-          <div class="course__name">Foie Gras de Canard</div>
-          <div class="course__desc">Poché au vin de Sauternes, truffe noire du Périgord en fine lamelle, brioche feuilletée au beurre de Bordier</div>
-          <div class="course__tag">Périgord</div>
-        </div>
-        <div class="course">
-          <div class="course__num">IV</div>
-          <div class="course__name">Turbot Sauvage de Ligne</div>
-          <div class="course__desc">Cuit sur peau, beurre blanc au verjus de Noilly Prat, artichaut violet confit à l'huile d'olive, poudre de câpres</div>
-          <div class="course__tag">Atlantique</div>
-        </div>
-        <div class="course">
-          <div class="course__num">V</div>
-          <div class="course__name">Interlude Glacé</div>
-          <div class="course__desc">Granité de champagne brut millésimé, verveine cristallisée, zeste de bergamote</div>
-          <div class="course__tag">Palais</div>
-        </div>
-        <div class="course">
-          <div class="course__num">VI</div>
-          <div class="course__name">Pigeonneau de Bresse</div>
-          <div class="course__desc">En croûte d'herbes des jardins, jus réduit à la Périgueux, pommes soufflées, girolles poêlées au thym</div>
-          <div class="course__tag">Bresse AOP</div>
-        </div>
-        <div class="course">
-          <div class="course__num">VII</div>
-          <div class="course__name">Sélection de Fromages</div>
-          <div class="course__desc">Affinés par Maître Xavier Dupont, compotée de figues de Solliès, pain aux noix et raisins de Corinthe</div>
-          <div class="course__tag">Affinés</div>
-        </div>
-        <div class="course">
-          <div class="course__num">VIII</div>
-          <div class="course__name">Pré-Dessert</div>
-          <div class="course__desc">Sorbet yuzu du Japon, fleurs de sureau en gelée légère, huile d'olive d'exception</div>
-          <div class="course__tag">Fraîcheur</div>
-        </div>
-        <div class="course">
-          <div class="course__num">IX</div>
-          <div class="course__name">Valrhona Grand Cru 75%</div>
-          <div class="course__desc">Caramel fleur de sel de Guérande, glace à la fève de tonka, éclats de pralin artisanal, feuille d'or</div>
-          <div class="course__tag">Dessert</div>
-        </div>
-      </div>
-      <div class="menu-card__footer">
-        <div class="menu-card__accord">Accords mets &amp; vins · <span>+ 95 €</span></div>
-        <div class="menu-card__note">Nos menus sont élaborés avec des produits de saison. Allergènes et régimes particuliers sur demande lors de la réservation.</div>
-      </div>
+  <!-- SECTION NAV -->
+  <div class="section-nav" id="sectionNav">
+    <div class="section-nav__inner">
+      <a href="#entrees"     class="snav-link active">Entrées</a>
+      <a href="#salades"     class="snav-link">Salades</a>
+      <a href="#specialites" class="snav-link">Spécialités</a>
+      <a href="#viandes"     class="snav-link">Viandes</a>
+      <a href="#burgers"     class="snav-link">Burgers</a>
+      <a href="#pizzas"      class="snav-link">Pizzas</a>
+      <a href="#desserts"    class="snav-link">Desserts</a>
+      <a href="#cocktails"   class="snav-link">Cocktails</a>
     </div>
   </div>
 
-  <!-- MENU CARTE BLANCHE -->
-  <div class="menu-display" id="menu-blanche">
-    <div class="menu-card">
-      <div class="menu-card__header">
-        <div>
-          <div class="menu-card__restaurant">Ardoise · ★★★</div>
-          <div class="menu-card__title">Menu Carte Blanche</div>
-        </div>
-        <div>
-          <div class="menu-card__services">12 services · Marché du jour</div>
-          <div class="menu-card__price-main">225 €</div>
-        </div>
-      </div>
-      <div class="menu-card__body">
-        <div class="course">
-          <div class="course__num">·</div>
-          <div class="course__name">Le Menu Carte Blanche</div>
-          <div class="course__desc">Entièrement composé chaque matin par le Chef Étienne Marchand selon les arrivages du marché et l'inspiration du moment. Ce menu de 12 services est une expérience unique, différente à chaque service, fidèle à notre philosophie de la cuisine de l'essentiel.</div>
-          <div class="course__tag">Surprise</div>
-        </div>
-        <div class="course">
-          <div class="course__num">·</div>
-          <div class="course__name">Engagement du Chef</div>
-          <div class="course__desc">Produits exclusivement français, circuit ultra-court, producteurs partenaires depuis plus de vingt ans. Chaque assiette raconte une saison, un territoire, une rencontre.</div>
-          <div class="course__tag">Terroir</div>
-        </div>
-        <div class="course">
-          <div class="course__num">·</div>
-          <div class="course__name">Note</div>
-          <div class="course__desc">Ce menu requiert la confiance totale de nos hôtes. Merci de signaler vos allergies et intolérances lors de la réservation. Il n'est pas possible de modifier le déroulé des services une fois à table.</div>
-          <div class="course__tag">Information</div>
-        </div>
-      </div>
-      <div class="menu-card__footer">
-        <div class="menu-card__accord">Accords mets &amp; vins · <span>+ 145 €</span></div>
-        <div class="menu-card__note">Menu disponible uniquement au dîner, du mardi au samedi. Réservation au moins 48h à l'avance.</div>
-      </div>
-    </div>
-  </div>
+  <!-- MENU BODY -->
+  <div class="menu-body" role="main">
 
-  <!-- MENU VÉGÉTAL -->
-  <div class="menu-display" id="menu-vegetal">
-    <div class="menu-card">
-      <div class="menu-card__header">
-        <div>
-          <div class="menu-card__restaurant">Ardoise · ★★★</div>
-          <div class="menu-card__title">Menu Végétal</div>
+    <!-- ENTRÉES -->
+    <section class="menu-section" id="entrees">
+      <div class="section-header">
+        <div class="section-header__left">
+          <div class="section-tag">◇ Pour commencer</div>
+          <h2 class="section-title">Entrées</h2>
         </div>
-        <div>
-          <div class="menu-card__services">7 services</div>
-          <div class="menu-card__price-main">155 €</div>
+        <div class="section-photo" style="background-image:url('assets/images/entrees-plateau.jpg')"></div>
+      </div>
+      <div class="items-grid">
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Accras de morue maison</span>
+            <span class="item-price">9 €</span>
+          </div>
+          <p class="item-desc">Friture légère, sauce chien maison, citron vert</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Plateau apéritif Kabana</span>
+            <span class="item-price">16 €</span>
+          </div>
+          <p class="item-desc">Assortiment de bouchées créoles, dips & marinades maison</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Tartare d'espadon</span>
+            <span class="item-price">14 €</span>
+          </div>
+          <p class="item-desc">Agrumes, coriandre fraîche, avocat et huile de sésame grillé</p>
+          <span class="item-badge">Signature</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Crevettes sautées à l'ail</span>
+            <span class="item-price">13 €</span>
+          </div>
+          <p class="item-desc">Beurre persillé, pain grillé aux herbes</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Soupe de poisson créole</span>
+            <span class="item-price">10 €</span>
+          </div>
+          <p class="item-desc">Bouillon épicé maison, rouille et croûtons à l'ail</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Bruschetta poulet mariné</span>
+            <span class="item-price">11 €</span>
+          </div>
+          <p class="item-desc">Poulet grillé aux épices antillaises, tomate fraîche, basilic</p>
         </div>
       </div>
-      <div class="menu-card__body">
-        <div class="course">
-          <div class="course__num">I</div>
-          <div class="course__name">Amuse-bouche Végétal</div>
-          <div class="course__desc">Chips de topinambour, crème d'ail noir fermenté, mousse de châtaigne fumée, herbes du potager</div>
-          <div class="course__tag">Maison</div>
+    </section>
+
+    <!-- SALADES -->
+    <section class="menu-section" id="salades">
+      <div class="section-header">
+        <div class="section-header__left">
+          <div class="section-tag">◇ Fraîcheur & légèreté</div>
+          <h2 class="section-title">Salades</h2>
         </div>
-        <div class="course">
-          <div class="course__num">II</div>
-          <div class="course__name">Betterave & Noisette</div>
-          <div class="course__desc">Betterave chioggia cuite en croûte de sel, sorbet de betterave jaune, émulsion de noisette torréfiée, vinaigre de framboises</div>
-          <div class="course__tag">Jardin</div>
+        <div class="section-photo" style="background-image:url('assets/images/salade-poulet.jpg')"></div>
+      </div>
+      <div class="items-grid">
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Salade César au poulet grillé</span>
+            <span class="item-price">16 €</span>
+          </div>
+          <p class="item-desc">Poulet mariné, parmesan, croûtons maison, sauce César crémeuse</p>
+          <span class="item-badge">Incontournable</span>
         </div>
-        <div class="course">
-          <div class="course__num">III</div>
-          <div class="course__name">Céleri & Truffe</div>
-          <div class="course__desc">Céleri-rave rôti entier au beurre noisette, truffe noire râpée, jus de céleri réduit, estragon cristallisé</div>
-          <div class="course__tag">Périgord</div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Salade créole</span>
+            <span class="item-price">18 €</span>
+          </div>
+          <p class="item-desc">Cœur de palmier, avocat, crevettes tigrées, vinaigrette passion</p>
         </div>
-        <div class="course">
-          <div class="course__num">IV</div>
-          <div class="course__name">Risotto d'Épeautre</div>
-          <div class="course__desc">Épeautre de Haute-Provence, morilles fraîches poêlées, parmesan 36 mois, huile de truffe blanche d'Alba</div>
-          <div class="course__tag">Cereale</div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Salade de la maison</span>
+            <span class="item-price">14 €</span>
+          </div>
+          <p class="item-desc">Mesclun, tomates, concombre, thon, œuf dur, anchois, olives</p>
         </div>
-        <div class="course">
-          <div class="course__num">V</div>
-          <div class="course__name">Interlude</div>
-          <div class="course__desc">Granité de tomate verte, basilic grand vert, fleur de sel de Camargue</div>
-          <div class="course__tag">Fraîcheur</div>
-        </div>
-        <div class="course">
-          <div class="course__num">VI</div>
-          <div class="course__name">Fromages Végétariens</div>
-          <div class="course__desc">Sélection de fromages au lait cru présure végétale, miel de châtaignier, noix fraîches de Grenoble</div>
-          <div class="course__tag">Affinés</div>
-        </div>
-        <div class="course">
-          <div class="course__num">VII</div>
-          <div class="course__name">Tarte Fine au Citron</div>
-          <div class="course__desc">Citron de Menton, crème légère à la verveine citronnelle, meringue soufflée, sorbet yuzu-gingembre</div>
-          <div class="course__tag">Dessert</div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Salade tiède de poulpe</span>
+            <span class="item-price">19 €</span>
+          </div>
+          <p class="item-desc">Poulpe grillé, pommes de terre à l'huile, câpres, herbes fraîches</p>
         </div>
       </div>
-      <div class="menu-card__footer">
-        <div class="menu-card__accord">Accords mets &amp; vins · <span>+ 75 €</span></div>
-        <div class="menu-card__note">Menu 100% végétarien. Adaptable végétalien sur demande 48h à l'avance.</div>
-      </div>
+    </section>
+
+    <!-- PHOTO BAND -->
+    <div class="photo-band">
+      <div class="photo-band__img" style="background-image:url('assets/images/bar-salle-vue.WEBP');background-position:center center;"></div>
+      <div class="photo-band__overlay"></div>
+      <div class="photo-band__label">◇ &nbsp; Kabana House</div>
     </div>
-  </div>
+
+    <!-- SPÉCIALITÉS -->
+    <section class="menu-section" id="specialites">
+      <div class="section-header">
+        <div class="section-header__left">
+          <div class="section-tag">◇ Les saveurs des Antilles</div>
+          <h2 class="section-title">Spécialités créoles</h2>
+        </div>
+        <div class="section-photo" style="background-image:url('assets/images/langouste-pasta.jpg')"></div>
+      </div>
+      <div class="items-grid">
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Langouste grillée</span>
+            <span class="item-price">Prix du marché</span>
+          </div>
+          <p class="item-desc">Demi-langouste, beurre citron vert & coriandre, frites maison</p>
+          <span class="item-badge">Signature</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Pasta langouste</span>
+            <span class="item-price">Prix du marché</span>
+          </div>
+          <p class="item-desc">Tagliatelles fraîches, crème légère aux herbes, bisque de langouste</p>
+          <span class="item-badge">Signature</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Colombo de poulet</span>
+            <span class="item-price">18 €</span>
+          </div>
+          <p class="item-desc">Poulet mijoté aux épices colombo, riz créole, légumes pays</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Brochette de crevettes royales</span>
+            <span class="item-price">22 €</span>
+          </div>
+          <p class="item-desc">Crevettes marinées aux épices, sauce chien, riz basmati</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Daurade royale grillée</span>
+            <span class="item-price">24 €</span>
+          </div>
+          <p class="item-desc">Entière ou en filet, sauce vierge créole, légumes rôtis</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Fricassée de poulet au rhum</span>
+            <span class="item-price">20 €</span>
+          </div>
+          <p class="item-desc">Poulet flambé au rhum vieux, champignons, crème légère</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIANDES -->
+    <section class="menu-section" id="viandes">
+      <div class="section-header">
+        <div class="section-header__left">
+          <div class="section-tag">◇ Grillades & viandes</div>
+          <h2 class="section-title">Nos Viandes</h2>
+        </div>
+        <div class="section-photo" style="background-image:url('assets/images/steak-frites.jpg')"></div>
+      </div>
+      <div class="items-grid">
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Entrecôte 300g</span>
+            <span class="item-price">28 €</span>
+          </div>
+          <p class="item-desc">Sauce au poivre ou beurre maître d'hôtel, frites maison</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Côte de bœuf 700g (pour 2)</span>
+            <span class="item-price">65 €</span>
+          </div>
+          <p class="item-desc">Légumes rôtis, sauce béarnaise ou poivre, os à moelle</p>
+          <span class="item-badge">Pour 2 personnes</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Faux-filet 250g</span>
+            <span class="item-price">26 €</span>
+          </div>
+          <p class="item-desc">Sauce chimichurri créole, frites ou légumes de saison</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Magret de canard</span>
+            <span class="item-price">24 €</span>
+          </div>
+          <p class="item-desc">Sauce fruit de la passion, purée maison, haricots verts</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Poulet rôti aux épices créoles</span>
+            <span class="item-price">20 €</span>
+          </div>
+          <p class="item-desc">Marinade 24h, frites maison ou riz créole</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Mixed grill Kabana</span>
+            <span class="item-price">38 €</span>
+          </div>
+          <p class="item-desc">Entrecôte, brochette crevettes, poulet mariné, frites & sauces</p>
+          <span class="item-badge">Signature</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- BURGERS -->
+    <section class="menu-section" id="burgers">
+      <div class="section-header">
+        <div class="section-header__left">
+          <div class="section-tag">◇ Fait maison</div>
+          <h2 class="section-title">Burgers Gourmets</h2>
+        </div>
+      </div>
+      <div class="items-grid">
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Kabana Burger</span>
+            <span class="item-price">18 €</span>
+          </div>
+          <p class="item-desc">Steak haché 180g, cheddar fondu, bacon, oignons caramélisés, sauce BBQ maison</p>
+          <span class="item-badge">Notre signature</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Burger Créole</span>
+            <span class="item-price">17 €</span>
+          </div>
+          <p class="item-desc">Poulet grillé, avocat, tomate fraîche, sauce chien, pain brioché</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Double Smash Burger</span>
+            <span class="item-price">20 €</span>
+          </div>
+          <p class="item-desc">Double steak smashé, double cheddar, cornichons, sauce secrète maison</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Burger Végétarien</span>
+            <span class="item-price">15 €</span>
+          </div>
+          <p class="item-desc">Galette légumes & pois chiches, avocat, roquette, sauce yogourt citron</p>
+        </div>
+      </div>
+      <p style="padding:16px 48px 20px; font-family:'Jost',sans-serif; font-size:11px; color:rgba(200,191,173,.38); letter-spacing:.06em;">Tous nos burgers sont servis avec frites maison.</p>
+    </section>
+
+    <!-- PIZZAS -->
+    <section class="menu-section" id="pizzas">
+      <div class="section-header">
+        <div class="section-header__left">
+          <div class="section-tag">◇ Four à pierre</div>
+          <h2 class="section-title">Pizzas</h2>
+        </div>
+      </div>
+      <div class="items-grid">
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Margherita</span>
+            <span class="item-price">14 €</span>
+          </div>
+          <p class="item-desc">Sauce tomate, mozzarella di bufala, basilic frais</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Pizza Orientale</span>
+            <span class="item-price">17 €</span>
+          </div>
+          <p class="item-desc">Merguez, poivrons grillés, olives noires, harissa douce</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Pizza Créole</span>
+            <span class="item-price">17 €</span>
+          </div>
+          <p class="item-desc">Poulet au colombo, mozzarella, poivrons, sauce créole épicée</p>
+          <span class="item-badge">Exclusive</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Pizza Royale</span>
+            <span class="item-price">16 €</span>
+          </div>
+          <p class="item-desc">4 fromages : mozzarella, gorgonzola, chèvre, parmesan, noix</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Pizza Jambon Champignons</span>
+            <span class="item-price">15 €</span>
+          </div>
+          <p class="item-desc">Jambon cru, champignons de Paris, crème fraîche, gruyère</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Pizza Fruits de Mer</span>
+            <span class="item-price">19 €</span>
+          </div>
+          <p class="item-desc">Crevettes, calamars, palourdes, sauce tomate épicée, citron vert</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO BAND DESSERTS -->
+    <div class="photo-band">
+      <div class="photo-band__img" style="background-image:url('assets/images/table-repas-festif.WEBP');background-position:center center;"></div>
+      <div class="photo-band__overlay"></div>
+      <div class="photo-band__label">◇ &nbsp; Kabana House</div>
+    </div>
+
+    <!-- DESSERTS -->
+    <section class="menu-section" id="desserts">
+      <div class="section-header">
+        <div class="section-header__left">
+          <div class="section-tag">◇ Pour finir en beauté</div>
+          <h2 class="section-title">Desserts</h2>
+        </div>
+        <div class="section-photo" style="background-image:url('assets/images/pain-perdu.jpg')"></div>
+      </div>
+      <div class="items-grid">
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Pain perdu au rhum vieux</span>
+            <span class="item-price">9 €</span>
+          </div>
+          <p class="item-desc">Brioche maison, glace noix de coco, caramel beurre salé</p>
+          <span class="item-badge">Incontournable</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Fondant chocolat</span>
+            <span class="item-price">8 €</span>
+          </div>
+          <p class="item-desc">Cœur coulant, crème anglaise vanille Bourbon, éclats de pralin</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Ananas rôti à la vanille</span>
+            <span class="item-price">8 €</span>
+          </div>
+          <p class="item-desc">Ananas Victoria flambé au rhum agricole, sorbet coco</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Tiramisu créole</span>
+            <span class="item-price">9 €</span>
+          </div>
+          <p class="item-desc">Café antillais, biscuits rhum, crème mascarpone légère</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Crème brûlée à la noix de coco</span>
+            <span class="item-price">8 €</span>
+          </div>
+          <p class="item-desc">Crème onctueuse, croûte caramélisée, noix de coco grillée</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Assiette de sorbets maison</span>
+            <span class="item-price">7 €</span>
+          </div>
+          <p class="item-desc">3 boules au choix : mangue, coco, fruit de la passion, citron vert</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COCKTAILS -->
+    <section class="menu-section" id="cocktails">
+      <div class="section-header">
+        <div class="section-header__left">
+          <div class="section-tag">◇ Bar & boissons</div>
+          <h2 class="section-title">Cocktails & Boissons</h2>
+        </div>
+      </div>
+      <div class="items-grid">
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Ti' Punch rhum agricole</span>
+            <span class="item-price">10 €</span>
+          </div>
+          <p class="item-desc">Rhum agricole blanc ou vieux, sucre de canne, citron vert</p>
+          <span class="item-badge">Antillais</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Planteur maison</span>
+            <span class="item-price">11 €</span>
+          </div>
+          <p class="item-desc">Rhum ambré, jus de fruits tropicaux, sirop grenadine</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Mojito</span>
+            <span class="item-price">12 €</span>
+          </div>
+          <p class="item-desc">Rhum blanc, menthe fraîche, citron vert, sucre de canne, eau gazeuse</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Piña Colada</span>
+            <span class="item-price">12 €</span>
+          </div>
+          <p class="item-desc">Rhum blanc, lait de coco, jus d'ananas frais</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Cocktail Kabana</span>
+            <span class="item-price">13 €</span>
+          </div>
+          <p class="item-desc">Rhum vieux, fruit de la passion, mangue, gingembre frais</p>
+          <span class="item-badge">Signature</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Margarita Passion</span>
+            <span class="item-price">12 €</span>
+          </div>
+          <p class="item-desc">Tequila, triple sec, fruit de la passion, citron vert, sel</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Mocktail Tropical</span>
+            <span class="item-price">8 €</span>
+          </div>
+          <p class="item-desc">Mangue, citron vert, gingembre, eau gazeuse — sans alcool</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Jus de fruits frais</span>
+            <span class="item-price">6 €</span>
+          </div>
+          <p class="item-desc">Mangue, coco, maracudja, orange pressée — selon arrivage</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Bière Lorraine / Carib</span>
+            <span class="item-price">5 €</span>
+          </div>
+          <p class="item-desc">Bière locale de Guadeloupe, servie fraîche</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-top">
+            <span class="item-name">Eau, soda, café</span>
+            <span class="item-price">3 €</span>
+          </div>
+          <p class="item-desc">Eau minérale, Coca, Schweppes, café antillais</p>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /menu-body -->
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__top">
       <div>
-        <div class="footer__logo">Ardoise</div>
-        <div class="footer__tagline">La cuisine de l'essentiel</div>
+        <div class="footer__logo">Kabana House</div>
+        <div class="footer__tagline">Saveurs des Antilles · Esprit Lounge</div>
       </div>
       <div>
         <div class="footer__col-title">Navigation</div>
         <ul class="footer__links">
           <li><a href="index.html">Accueil</a></li>
           <li><a href="menu.html">Le menu</a></li>
-          <li><a href="about.html">À propos</a></li>
+          <li><a href="about.html">Notre Maison</a></li>
           <li><a href="reservation.html">Réservation</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
         </ul>
       </div>
       <div>
         <div class="footer__col-title">Nous trouver</div>
         <div class="footer__info">
-          <p>14, Rue des Quatre-Vents<br>75006 Paris</p>
-          <p style="margin-top:10px"><a href="tel:+33142687420">+33 1 42 68 74 20</a></p>
-          <p><a href="mailto:contact@ardoise-paris.fr">contact@ardoise-paris.fr</a></p>
-          <p style="margin-top:10px; font-size:11px; opacity:.6">Mar – Sam · 12h–14h30 · 19h–22h30</p>
+          <p>Centre commercial Destreland<br>Baie-Mahault 97122, Guadeloupe</p>
+          <p style="margin-top:10px"><a href="tel:+590690445050">+590 690 44-5050</a></p>
+          <p><a href="mailto:contact@kabanahouse.fr">contact@kabanahouse.fr</a></p>
+          <p style="margin-top:10px; font-size:11px; opacity:.6">Lun – Mer · 9h–23h30 · Jeu – Sam · 9h–Minuit</p>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
-      <div class="footer__copy">© 2026 Ardoise · Restaurant Gastronomique · Paris</div>
+      <div class="footer__copy">© 2026 Kabana House · Restaurant Lounge · Baie-Mahault, Guadeloupe</div>
       <div class="footer__social">
-        <a href="#"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-        <a href="#"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://www.instagram.com/kabana.house/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://www.tiktok.com/@kabana_house" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.3a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.18 8.18 0 0 0 4.78 1.52V6.79a4.85 4.85 0 0 1-1.02-.1z"/></svg></a>
       </div>
     </div>
   </footer>
 
-<script>
-  function switchMenu(id, btn) {
-    document.querySelectorAll('.menu-display').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.menu-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('menu-' + id).classList.add('active');
-    btn.classList.add('active');
-  }
-</script>
-
 <div class="nav-overlay" id="navOverlay">
   <button class="nav-overlay__close" aria-label="Fermer"><span></span><span></span></button>
   <nav class="nav-overlay__links">
-    <a href="index.html">Accueil</a>
-    <a href="menu.html" class="active">Menu</a>
-    <a href="reservation.html">Réservation</a>
-    <a href="about.html">Notre Restaurant</a>
+    <a href="index.html" data-label="Accueil"><span>Accueil</span></a>
+    <a href="menu.html" class="active" data-label="Menu"><span>Menu</span></a>
+    <a href="reservation.html" data-label="Réservation"><span>Réservation</span></a>
+    <a href="about.html" data-label="Notre Maison"><span>Notre Maison</span></a>
   </nav>
+  <a href="mentions-legales.html" style="margin-top:28px;font-family:'Jost',sans-serif;font-weight:300;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,191,173,.28);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='rgba(200,191,173,.55)'" onmouseout="this.style.color='rgba(200,191,173,.28)'">Mentions légales</a>
 </div>
 
+<script src="assets/js/cookie-banner.js" defer></script>
 <script>
 (function(){
   var burger  = document.querySelector('.nav__burger');
   var overlay = document.getElementById('navOverlay');
-  function openMenu()  { burger.classList.add('open');    overlay.classList.add('open');    document.body.style.overflow='hidden'; }
-  function closeMenu() { burger.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
+  function openMenu()  { burger.classList.add('open');    burger.setAttribute('aria-expanded','true');  overlay.classList.add('open');    document.body.style.overflow='hidden'; }
+  function closeMenu() { burger.classList.remove('open'); burger.setAttribute('aria-expanded','false'); overlay.classList.remove('open'); document.body.style.overflow=''; }
   function toggle()    { overlay.classList.contains('open') ? closeMenu() : openMenu(); }
   burger.addEventListener('click', toggle);
   document.querySelector('.nav-overlay__close').addEventListener('click', closeMenu);
   overlay.addEventListener('click', function(e){ if(e.target===overlay) closeMenu(); });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+})();
+</script>
+<script>
+(function(){
+  var links = document.querySelectorAll('.snav-link');
+  var sections = document.querySelectorAll('.menu-section[id]');
+
+  links.forEach(function(link){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      var id = this.getAttribute('href').replace('#','');
+      var target = document.getElementById(id);
+      if(target){ target.scrollIntoView({ behavior:'smooth', block:'center' }); }
+    });
+  });
+
+  function onScroll(){
+    var scrollY = window.scrollY + 160;
+    var active = null;
+    sections.forEach(function(s){ if(s.offsetTop <= scrollY) active = s.id; });
+    links.forEach(function(l){
+      var href = l.getAttribute('href').replace('#','');
+      l.classList.toggle('active', href === active);
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
 })();
 </script>
 </body>
