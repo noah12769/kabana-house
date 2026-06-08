@@ -61,6 +61,8 @@
     .nav__links a { display:block; font-family:'Jost',sans-serif; font-weight:300; font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,235,224,.58); text-decoration:none; padding:7px 13px; border-radius:999px; transition:background .2s, color .2s; white-space:nowrap; }
     .nav__links a:hover { color:var(--cream); background:rgba(240,235,224,.1); }
     .nav__links a.active { color:var(--cream); background:rgba(240,235,224,.14); }
+    .nav__links a.nav__cta { color:var(--cream); background:rgba(184,169,138,.22); border:1px solid rgba(184,169,138,.28); }
+    .nav__links a.nav__cta:hover { background:rgba(184,169,138,.36); }
 
     /* BANNER */
     .resy-banner {
@@ -71,7 +73,7 @@
     }
     .resy-banner__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(6,4,3,.92) 0%, rgba(6,4,3,.6) 60%, rgba(6,4,3,.35) 100%); }
     .resy-banner__content { position:relative; z-index:2; height:100%; display:flex; flex-direction:column; justify-content:flex-end; padding:36px 48px; }
-    .resy-banner__eyebrow { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
+    .resy-banner__eyebrow { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.34em; text-transform:uppercase; color:var(--cream); opacity:.75; margin-bottom:10px; }
     .resy-banner__title { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(44px,5.5vw,68px); letter-spacing:.04em; text-transform:uppercase; color:var(--cream); line-height:.92; text-shadow:0 2px 16px rgba(0,0,0,.5); }
 
     /* MAIN 2-COL */
@@ -83,7 +85,7 @@
       background-image:url('assets/images/salle-banquettes.jpg');
       background-size:cover; background-position:center;
     }
-    .resy-info__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(4,3,2,.97) 0%, rgba(4,3,2,.93) 55%, rgba(4,3,2,.82) 100%); }
+    .resy-info__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(4,3,2,.96) 0%, rgba(4,3,2,.82) 35%, rgba(4,3,2,.3) 60%, rgba(4,3,2,.08) 100%); }
     .resy-info__content { position:relative; z-index:2; height:100%; display:flex; flex-direction:column; justify-content:flex-end; padding:48px 44px; }
 
     .resy-info__tag { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; text-shadow:0 1px 6px rgba(0,0,0,.6); }
@@ -220,10 +222,10 @@
     /* RESPONSIVE */
     @media (max-width:900px) {
       .resy-main { grid-template-columns:1fr; }
+      .resy-card { order:-1; }
       .resy-info { min-height:320px; }
       .resy-card { padding:44px 36px; }
     }
-    .resy-banner__cta { display:none; }
     @media (max-width:700px) {
       body { padding:8px; }
       .nav { padding:8px 10px 8px 12px; }
@@ -231,7 +233,6 @@
       .nav__links a { padding:6px 8px; font-size:9.5px; letter-spacing:.12em; }
       .resy-banner { height:160px; }
       .resy-banner__content { padding:24px 28px; }
-      .resy-banner__cta { display:inline-flex; align-items:center; gap:8px; margin-top:16px; padding:9px 20px; background:rgba(184,169,138,.18); border:1px solid rgba(184,169,138,.38); border-radius:999px; font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--cream); text-decoration:none; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
       .resy-info__content { padding:32px 28px; }
       .resy-card { padding:36px 28px; }
       .form-row { grid-template-columns:1fr; gap:10px; }
@@ -294,7 +295,7 @@
       <ul class="nav__links">
         <li><a href="menu.html">Menu</a></li>
         <li><a href="about.html">À propos</a></li>
-        <li><a href="reservation.html" class="active" aria-current="page">Réserver</a></li>
+        <li><a href="reservation.html" class="active nav__cta" aria-current="page">Réserver</a></li>
       </ul>
     </nav>
   </div>
@@ -305,7 +306,6 @@
     <div class="resy-banner__content">
       <div class="resy-banner__eyebrow">Kabana House · Destreland, Baie-Mahault</div>
       <h1 class="resy-banner__title">Réservation</h1>
-      <a class="resy-banner__cta" href="#form-resy">Réserver une table →</a>
     </div>
   </div>
 
