@@ -126,7 +126,7 @@
     .panel--resy    .panel__photo { background-image:url('assets/images/resy-ambiance.jpg'); background-position:center 30%; }
     .panel--resto   .panel__photo { background-image:url('assets/images/salle-table.jpg'); background-position:center; }
     .panel__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.88) 0%, rgba(0,0,0,.35) 55%, rgba(0,0,0,.08) 100%); }
-    .panel__label { position:absolute; bottom:16px; right:18px; z-index:5; display:flex; align-items:center; gap:8px; font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--cream2); transition:color .2s, gap .25s; text-shadow:0 1px 8px rgba(0,0,0,.7); }
+    .panel__label { position:absolute; bottom:16px; right:18px; z-index:5; display:flex; align-items:center; gap:8px; font-family:'Jost',sans-serif; font-weight:600; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--cream); transition:color .2s, gap .25s; text-shadow:0 1px 8px rgba(0,0,0,.7); }
     .panel:hover .panel__label { color:var(--cream); gap:13px; }
     .panel__label .arr { font-size:13px; transition:transform .25s; }
     .panel:hover .panel__label .arr { transform:translateX(3px); }
@@ -280,7 +280,7 @@
     <a class="panel panel--resto" href="about.html">
       <div class="panel__photo"></div>
       <div class="panel__overlay"></div>
-      <div class="panel__label">Notre Maison <span class="arr">→</span></div>
+      <div class="panel__label">Notre Restaurant <span class="arr">→</span></div>
     </a>
   </div>
 
@@ -292,7 +292,7 @@
     <a href="index.html" class="active" aria-current="page" data-label="Accueil"><span>Accueil</span></a>
     <a href="menu.html" data-label="Menu"><span>Menu</span></a>
     <a href="reservation.html" data-label="Réserver"><span>Réserver</span></a>
-    <a href="about.html" data-label="Notre Maison"><span>Notre Maison</span></a>
+    <a href="about.html" data-label="Notre Restaurant"><span>Notre Restaurant</span></a>
   </nav>
   <a href="mentions-legales.html" style="margin-top:28px;font-family:'Jost',sans-serif;font-weight:300;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,191,173,.28);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='rgba(200,191,173,.55)'" onmouseout="this.style.color='rgba(200,191,173,.28)'">Mentions légales</a>
 </div>
